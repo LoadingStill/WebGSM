@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <style>
+        /* Style for the image buttons */
+        .game-button {
+            width: 200px; /* One-third of the original width (600px / 3) */
+            height: 300px; /* One-third of the original height (900px / 3) */
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Three resized image buttons with links -->
+    <a id="factorio-button" href="{{ url_for('factorio_page') }}"><img class="game-button" src="https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg?t=1597145422" alt="Factorio"></a>
+    <a id="csgo2-button" href="{{ url_for('csgo2_page') }}"><img class="game-button" src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg?t=1695852468" alt="CS:GO2"></a>
+</body>
+</html>
