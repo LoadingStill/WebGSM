@@ -10,5 +10,5 @@ Just a couple of things to keep in mind:
 
 Thanks, everyone!
 
-Ryan Young
+Ryan Young  
 October 18, 2023
