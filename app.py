@@ -9,9 +9,9 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/games/csgo2')
+@app.route('/games/cs2')
 def csgo2_page():
-    return render_template('games/csgo2.html')
+    return render_template('games/cs2.html')
 
 
 @app.route('/games/factorio')
