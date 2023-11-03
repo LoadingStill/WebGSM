@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorio Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Sidebar</h3>
+        <a href="#">Link 1</a><br>
+        <a href="#">Link 2</a><br>
+        <a href="#">Link 3</a><br>
+        <button class="installButton" title="Install Factorio Server">Install</button><br>
+        <button class="startButton" title="Start Factorio Server">Start</button><br>
+        <button class="stopButton" title="Stop Factorio Server">Stop</button><br>
+        <button class="restartButton" title="Restart Factorio Server">Restart</button><br>
+        <button class="consoleButton" title="Console Factorio Server">Console</button><br>
+        <button class="updateButton" title="Update Factorio Server">Update</button><br>
+        <button class="force-updateButton" title="force-update Factorio Server">Force-Update</button><br>
+        <button class="validateButton" title="Validate Factorio Server">Validate</button><br>
+        <button class="detailsButton" title="Details Factorio Server">Details</button><br>
+        <button class="debugButton" title="Debug Factorio Server">Debug</button><br>
+        <button class="backupButton" title="Backup Factorio Server">Backup</button><br>
+        <button class="monitorButton" title="Monitor Factorio Server">Monitor</button><br>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Factorio Game Page</h1>
+        <p>This is the Factorio game content.</p>
+        <!-- Add an empty div to display script output -->
+        <div id="output"></div>
+    </div>
+    <script>
+        function runScript() {
+            // Change button color to grey while the script is running
+            $('.installButton').css('background-color', 'grey');
+
+            // Send a request to your Flask server to run the script
+            $.ajax({
+                url: '/run-script', // URL to trigger the Python script execution
+                method: 'POST',
+                success: function(data) {
+                    // Display the output in a new browser tab
+                    window.open('data:text/plain,' + encodeURIComponent(data), '_blank');
+
+                    // Change button color to green
+                    $('.installButton').css('background-color', 'green');
+                },
+                error: function() {
+                    alert('An error occurred while running the script.');
+                }
+            });
+        }
+
+        // Attach the runScript function to the Install button's click event
+        $('.installButton').click(runScript);
+    </script>
+</body>
+</html>
