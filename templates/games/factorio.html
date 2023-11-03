@@ -19,5 +19,33 @@
     <button class="debugButton" title="Debug Factorio Server">Debug</button>
     <button class="backupButton" title="Backup Factorio Server">Backup</button>
     <button class="monitorButton" title="Monitor Factorio Server">Monitor</button>
+        <!-- Add an empty div to display script output -->
+    <div id="output"></div>
+
+    <script>
+        function runScript() {
+            // Change button color to grey while the script is running
+            $('.installButton').css('background-color', 'grey');
+
+            // Send a request to your Flask server to run the script
+            $.ajax({
+                url: '/run-script', // URL to trigger the Python script execution
+                method: 'POST',
+                success: function(data) {
+                    // Display the output in a new browser tab
+                    window.open('data:text/plain,' + encodeURIComponent(data), '_blank');
+
+                    // Change button color to green
+                    $('.installButton').css('background-color', 'green');
+                },
+                error: function() {
+                    alert('An error occurred while running the script.');
+                }
+            });
+        }
+
+        // Attach the runScript function to the Install button's click event
+        $('.installButton').click(runScript);
+    </script>
 </body>
 </html>
