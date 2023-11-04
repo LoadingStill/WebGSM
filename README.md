@@ -17,7 +17,7 @@ LGSM-WebGUI is a passionate endeavor to enhance the experience of managing game 
 LGSM-WebGUI is a collaborative effort fueled by a community of passionate gamers, developers, and Linux enthusiasts. Our contributors come from diverse backgrounds, uniting their skills to create an exceptional tool that benefits the gaming community.
 
 Contributor:
-- [LoadingStill](https://git.gitea.com/LoadingStill)
+- [LoadingStill](https://git.howtoit.com/LoadingStill)
 
 
 ## Get Involved
