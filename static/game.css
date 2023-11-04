@@ -1,14 +1,15 @@
-.container {
-  display: flex;
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
-
-.left-column {
-  width: 20%; /* Adjust as needed */
-  border-right: 1px solid black; /* Adjust color as needed */
-  padding-right: 10px; /* Adjust as needed */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
 }
-
-.right-column {
-  width: 80%; /* Adjust as needed */
-  padding-left: 10px; /* Adjust as needed */
+.content {
+    flex-grow: 1;
+    padding: 20px;
 }
