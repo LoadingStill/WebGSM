@@ -30,8 +30,9 @@ def install_factorio():
     if game == 'factorio':
         try:
             subprocess.run(['chmod', '+x', 'games/factorio/installFactorio.sh'], check=True)
-            subprocess.run(['games/factorio/installFactorio.sh'], check=True)
-            return "Factorio installation started."
+            result = subprocess.run(['games/factorio/installFactorio.sh'], check=True, text=True, capture_output=True)
+            output = result.stdout
+            return f"Factorio installation started. Output: {output}"
         except subprocess.CalledProcessError as e:
             return f"Error: {e.returncode}, {e.output.decode()}"
     else:
