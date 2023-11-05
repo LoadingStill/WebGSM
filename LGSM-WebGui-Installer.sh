@@ -9,9 +9,9 @@ GITEA_FILE_URL="https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zi
 # Make the folder where this will be stored
 mkdir /var/www
 
-wget -O /var/www/file.zip https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip
+wget -O /var/www/lgsm-webgui.zip https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip
 
-unzip /var/www/main.zip /var/www/
+unzip /var/www/lgsm-webgui.zip /var/www/
 
 echo "Download, unzip, and move completed."
 
