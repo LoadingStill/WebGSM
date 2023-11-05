@@ -27,9 +27,10 @@ def get_cpu_usage():
     return psutil.cpu_percent(interval=.25)
 
 
-@app.route('/static/js/cpu_usage.js')
-def serve_cpu_usage_js():
-    return send_file('static/js/cpu_usage.js')
+@app.route('/get_cpu_usage')
+def get_cpu_usage_route():
+    cpu_usage = get_cpu_usage()
+    return jsonify({'cpu_usage': cpu_usage})
 
 
 @app.route('/run-script', methods=['POST'])
