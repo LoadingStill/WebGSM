@@ -2,6 +2,13 @@
 
 Welcome to LGSM-WebGUI, your gateway to a user-friendly graphical interface for LinuxGSM (Linux Game Server Managers). Our project is dedicated to simplifying server management for gamers, developers, and system administrators by providing an intuitive and powerful web-based GUI for LinuxGSM.
 
+## Installation
+- Officially Debian 11 is supported.
+- Download the [LGSM-WebGui-Installer.sh](https://git.howtoit.com/LoadingStill/LGSM-WebGUI/src/branch/main/GameServerInstaller.sh)
+- Change the files permission to allow execution `sudo chmod +x LGSM-WebGui-Installer.sh`
+- Run the file `./LGSM-WebGui-Installer.sh`
+- This script code is located here https://git.howtoit.com/LoadingStill/LGSM-WebGUI/src/branch/main/GameServerInstaller.sh
+
 ## Project Overview
 LGSM-WebGUI is a passionate endeavor to enhance the experience of managing game servers on Linux using the well-established LinuxGSM toolset. We recognize the importance of efficient server administration, and our goal is to make it accessible to both novices and experienced users alike.
 
