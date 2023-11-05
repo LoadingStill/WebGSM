@@ -23,6 +23,16 @@ def factorio_page():
     return render_template('games/factorio.html')
 
 
+def get_cpu_usage():
+    return psutil.cpu_percent(interval=1)
+
+
+@app.route('/get_cpu_usage')
+def get_cpu_usage_route():
+    cpu_usage = get_cpu_usage()
+    return jsonify({'cpu_usage': cpu_usage})
+
+
 @app.route('/run-script', methods=['POST'])
 def run_script():
     script_path = os.path.join(os.path.dirname(__file__), 'gamesFolder', 'factorio', 'factorioInstall.sh')
