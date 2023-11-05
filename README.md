@@ -5,8 +5,8 @@ Welcome to LGSM-WebGUI, your gateway to a user-friendly graphical interface for 
 ## Installation
 - Officially Debian 11 is supported.
 - Go to this files page [LGSM-WebGui-Installer.sh](https://git.howtoit.com/LoadingStill/LGSM-WebGUI/src/branch/main/LGSM-WebGui-Installer.sh) and click the download icon on the top right of the file.
-- Change the files permission to allow execution `sudo chmod +x LGSM-WebGui-Installer.sh`
-- Run the file `sudo ./LGSM-WebGui-Installer.sh`
+- Change the files permission to allow execution `sudo chmod +x ~/Downloads/LGSM-WebGui-Installer.sh`
+- Run the file `sudo .~/Downloads/LGSM-WebGui-Installer.sh`
 
 ## Uninstalling
 - Change the files permission to allow execution `sudo chmod +x /var/www/lgsm-webgui/uninstall.sh`
