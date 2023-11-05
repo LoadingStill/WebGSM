@@ -15,3 +15,6 @@ sudo systemctl daemon-reload
 
 # Remove the webgui files
 sudo rm -r /var/www/lgsm-webgui
+
+# Removed the initial isntall script
+sudo rm ~/Downloads/LGSM-WebGUI-Installer.sh
