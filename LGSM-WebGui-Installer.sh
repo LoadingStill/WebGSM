@@ -5,6 +5,11 @@
 # variables
 NEW_USER=$SUDO_USER
 
+# Define ANSI color codes
+RED="\033[31m"
+GREEN="\033[32m"
+RESET="\033[0m"
+
 # Define the URL of the file you want to download from Gitea
 GITEA_FILE_URL="https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip"
 
@@ -21,7 +26,7 @@ unzip /var/www/lgsm-webgui.zip -d /var/www/
 rm /var/www/lgsm-webgui.zip
 
 # Tells user what has completed
-echo "Download, unzip, and move completed."
+echo -e ${GREEN}"Download, unzip, and move completed."${RESET}
 
 # make /var/www/lgsm-webgui/run.sh executable
 sudo chmod +x /var/www/lgsm-webgui/run.sh
@@ -55,4 +60,4 @@ systemctl enable lgsm-webgui.service
 # Start the service
 systemctl start lgsm-webgui.service
 
-echo "Start at boot enabled."
+echo -e ${GREEN}"Start at boot enabled." ${RESET}
