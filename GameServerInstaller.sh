@@ -26,3 +26,29 @@ chmod +x "$DESTINATION_DIR/$INSTALL_SCRIPT"
 rm -rf "$TMP_DIR"
 
 echo "Download, unzip, and move completed."
+
+
+# Create the systemd service unit file
+cat <<EOL > /etc/systemd/system/lgsm-webgui.service
+[Unit]
+Description=Download and Install Script for $(whoami)
+
+[Service]
+Type=simple
+User=$(whoami)
+ExecStart=$(pwd)/download_and_install.sh
+
+[Install]
+WantedBy=multi-user.target
+EOL
+
+# Reload the systemd manager to recognize the new service
+systemctl daemon-reload
+
+# Enable the service to start on boot
+systemctl enable lgsm-webgui.service
+
+# Start the service
+systemctl start lgsm-webgui.service
+
+echo "Setup completed."
