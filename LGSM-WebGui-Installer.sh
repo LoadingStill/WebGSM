@@ -2,6 +2,9 @@
 # run this file with sudo permissions, this will allow creation of needed folders /var/www
 # downloading files into that folder and creation of the .service file for running this program at boot
 
+# Installs the needed software
+sudo apt install python3-venv
+
 # variables
 NEW_USER=$SUDO_USER
 
