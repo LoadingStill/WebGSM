@@ -13,7 +13,7 @@ deactivate
 
 # Installs the needed software
 sudo apt install python3-venv gcc python3-dev python3-pip
-pip install --no-binary :all: psutil
+#pip install --no-binary :all: psutil
 
 # variables
 NEW_USER=$SUDO_USER
