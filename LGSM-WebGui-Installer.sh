@@ -3,7 +3,8 @@
 # downloading files into that folder and creation of the .service file for running this program at boot
 
 # Installs the needed software
-sudo apt install python3-venv
+sudo apt install python3-venv gcc python3-dev
+pip install --no-binary :all: psutil
 
 # variables
 NEW_USER=$SUDO_USER
