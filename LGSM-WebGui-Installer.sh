@@ -6,15 +6,6 @@
 sudo apt install python3-venv gcc python3-dev python3-pip
 #pip install --no-binary :all: psutil
 
-# Activate the virtual environment
-source /var/www/lgsm-webgui/venv/bin/activate
-
-# Install the psutil module
-pip install psutil
-
-# Exit the virtual environment
-deactivate
-
 # variables
 NEW_USER=$SUDO_USER
 
@@ -74,3 +65,7 @@ systemctl enable lgsm-webgui.service
 systemctl start lgsm-webgui.service
 
 echo -e ${GREEN}"Start at boot enabled." ${RESET}
+
+sudo chmod +x install2.sh
+sudo ./insatll2.sh
+sudo reboot
