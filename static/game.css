@@ -8,6 +8,8 @@ body {
     height: 100vh;
     background-color: #f5f5f5;
     padding: 20px;
+    position: fixed; /* or position: absolute; */
+    left: 0;
 }
 .content {
     flex-grow: 1;
