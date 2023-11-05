@@ -3,29 +3,17 @@
 # Define the URL of the file you want to download from Gitea
 GITEA_FILE_URL="https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip"
 
-# Define the destination directory
-DESTINATION_DIR="/var/www"
+# Make the folder where this will be stored
+sudo mkdir /var/www
 
-# Define the name of the install script
-INSTALL_SCRIPT="install.sh"
+cd ~/Download
 
-# Download the file from Gitea and save it to a temporary location
-TMP_DIR=$(mktemp -d)
-curl -L -o "$TMP_DIR/downloaded_file.zip" "$GITEA_FILE_URL"
+wget https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip
 
-# Unzip the downloaded file
-unzip "$TMP_DIR/downloaded_file.zip" -d "$TMP_DIR"
-
-# Move the unzipped files to the destination directory
-mv "$TMP_DIR"/* "$DESTINATION_DIR"
-
-# Change the permissions of the install.sh file
-chmod +x "$DESTINATION_DIR/$INSTALL_SCRIPT"
-
-# Clean up the temporary directory
-rm -rf "$TMP_DIR"
+sudo mv Downloads/main.zip /var/www/
 
 echo "Download, unzip, and move completed."
+
 
 
 # Create the systemd service unit file
