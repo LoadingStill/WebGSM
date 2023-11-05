@@ -21,7 +21,8 @@ rm /var/www/lgsm-webgui.zip
 # Tells user what has completed
 echo "Download, unzip, and move completed."
 
-
+# make /var/www/lgsm-webgui/run.sh executable
+sudo chmod +x /var/www/lgsm-webgui/run.sh
 
 # Create the systemd service unit file
 cat <<EOL > /etc/systemd/system/lgsm-webgui.service
