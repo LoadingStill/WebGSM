@@ -77,3 +77,10 @@ systemctl enable lgsm-webgui.service
 systemctl start lgsm-webgui.service
 
 echo -e ${GREEN}"Start at boot enabled." ${RESET}
+
+# Set the directory where you want to search for .sh files
+directory="/var/www/lgsm-webgui"
+
+# Use the find command with sudo to locate all .sh files and make them executable
+# This allows execution of all .sh files for game instlation and edditing.
+sudo find "$directory" -type f -name "*.sh" -exec sudo chmod +x {} \;
