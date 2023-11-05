@@ -8,7 +8,10 @@
 <body>
     <div class="sidebar">
         <h3>Sidebar</h3>
-        <button class="installButton" title="Install Factorio Server">Install</button><br>
+        <form action="/install_factorio" method="post">
+            <button class="installButton" title="Install Factorio Server">Install</button><br>
+            <input type="hidden" name="game" value="factorio">
+        </form>
         <button class="startButton" title="Start Factorio Server">Start</button><br>
         <button class="stopButton" title="Stop Factorio Server">Stop</button><br>
         <button class="restartButton" title="Restart Factorio Server">Restart</button><br>
