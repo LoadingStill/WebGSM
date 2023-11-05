@@ -10,7 +10,7 @@ Welcome to LGSM-WebGUI, your gateway to a user-friendly graphical interface for 
 
 ## Uninstalling
 - Change the files permission to allow execution `sudo chmod +x /var/www/lgsm-webgui/uninstall.sh`
-- Run the file `sudo ./var/www/lgsm-webgui/uninstall.sh`
+- Run the file `sudo /var/www/lgsm-webgui/uninstall.sh`
 - **This will not unisntall the game servers you installed.  You will need to do that manually in the gui or the terminal.  Each game server is running as its own user, delete the user equals deleting the game server.  Please remember to close the ports of the games you remove.
 
 ## Project Overview
