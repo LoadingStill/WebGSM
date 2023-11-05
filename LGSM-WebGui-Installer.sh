@@ -2,6 +2,8 @@
 # run this file with sudo permissions, this will allow creation of needed folders /var/www
 # downloading files into that folder and creation of the .service file for running this program at boot
 
+# variables
+NEW_USER=$SUDO_USER
 
 # Define the URL of the file you want to download from Gitea
 GITEA_FILE_URL="https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip"
@@ -24,6 +26,12 @@ echo "Download, unzip, and move completed."
 # make /var/www/lgsm-webgui/run.sh executable
 sudo chmod +x /var/www/lgsm-webgui/run.sh
 
+# Adds user to nologin group
+sudo useradd -r -s /bin/nologin $NEW_USER
+
+# Change ownership of file to group lgms-webgui
+sudo chown -R $NEW_USER:$NEW_USER /var/www/lgsm-webgui
+
 # Create the systemd service unit file
 cat <<EOL > /etc/systemd/system/lgsm-webgui.service
 [Unit]
@@ -31,7 +39,7 @@ Description=LGMS-WebGUI start at boot.
 
 [Service]
 Type=simple
-User=$SUDO_USER
+User=$NEW_USER
 ExecStart=/var/www/lgsm-webgui/run.sh
 
 [Install]
