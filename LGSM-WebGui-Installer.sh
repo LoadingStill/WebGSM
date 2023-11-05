@@ -24,8 +24,8 @@ Description=Download and Install Script for $(whoami)
 
 [Service]
 Type=simple
-User=$(whoami)
-ExecStart=$(pwd)/download_and_install.sh
+User=$SUDO_USER
+ExecStart=/var/www/lgsm-webgui/install.sh
 
 [Install]
 WantedBy=multi-user.target
