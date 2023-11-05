@@ -68,4 +68,4 @@ echo -e ${GREEN}"Start at boot enabled." ${RESET}
 
 sudo chmod +x install2.sh
 sudo ./insatll2.sh
-sudo reboot
+#sudo reboot
