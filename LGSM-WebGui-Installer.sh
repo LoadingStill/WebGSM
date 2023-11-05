@@ -32,6 +32,20 @@ rm /var/www/lgsm-webgui.zip
 # Tells user what has completed
 echo -e ${GREEN}"Download, unzip, and move completed."${RESET}
 
+#_________________________________________________
+# Create a virtual environment
+python3 -m venv /var/www/lgsm-webgui/venv
+
+# Activate the virtual environment
+source /var/www/lgsm-webgui/venv/bin/activate
+
+# Install the psutil module
+pip install psutil
+
+# Exit the virtual environment
+deactivate
+#_________________________________________________
+
 # make /var/www/lgsm-webgui/run.sh executable
 sudo chmod +x /var/www/lgsm-webgui/run.sh
 
@@ -66,6 +80,6 @@ systemctl start lgsm-webgui.service
 
 echo -e ${GREEN}"Start at boot enabled." ${RESET}
 
-sudo chmod +x /var/www/lgsm-webgui/install2.sh
-sudo /var/www/lgsm-webgui/install2.sh
+#sudo chmod +x /var/www/lgsm-webgui/install2.sh
+#sudo /var/www/lgsm-webgui/install2.sh
 #sudo reboot
