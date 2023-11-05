@@ -20,3 +20,12 @@ body {
     height: 300px; /* One-third of the original height (900px / 3) */
     margin: 5px;
 }
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    position: fixed; /* or position: absolute; */
+    left: 0;
+}
