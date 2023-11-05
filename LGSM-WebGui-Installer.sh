@@ -1,16 +1,17 @@
 #!/bin/bash
+# run this file with sudo permissions, this will allow creation of needed folders /var/www
+# downloading files into that folder and creation of the .service file for running this program at boot
+
 
 # Define the URL of the file you want to download from Gitea
 GITEA_FILE_URL="https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip"
 
 # Make the folder where this will be stored
-sudo mkdir /var/www
+mkdir /var/www
 
-cd ~/Download
+curl -o /var/www/file.zip https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip
 
-wget https://git.howtoit.com/LoadingStill/LGSM-WebGUI/archive/main.zip
-
-sudo mv Downloads/main.zip /var/www/
+unzip /var/www/main.zip /var/www/
 
 echo "Download, unzip, and move completed."
 
