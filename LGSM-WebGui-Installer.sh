@@ -32,7 +32,7 @@ echo -e ${GREEN}"Download, unzip, and move completed."${RESET}
 sudo chmod +x /var/www/lgsm-webgui/run.sh
 
 # Adds user to nologin group
-sudo useradd -r -s /bin/nologin $NEW_USER
+sudo useradd -r -s /usr/sbin/nologin $NEW_USER
 
 # Change ownership of file to group lgms-webgui
 sudo chown -R $NEW_USER:$NEW_USER /var/www/lgsm-webgui
