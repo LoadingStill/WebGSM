@@ -23,6 +23,21 @@ def factorio_page():
     return render_template('games/factorio.html')
 
 
+@app.route('/install_factorio', methods=['POST'])
+def install_factorio():
+    game = request.form.get('game')
+
+    if game == 'factorio':
+        try:
+            subprocess.run(['chmod', '+x', 'games/factorio/installFactorio.sh'], check=True)
+            subprocess.run(['games/factorio/installFactorio.sh'], check=True)
+            return "Factorio installation started."
+        except subprocess.CalledProcessError as e:
+            return f"Error: {e.returncode}, {e.output.decode()}"
+    else:
+        return "Invalid game specified."
+
+
 def get_cpu_usage():
     return psutil.cpu_percent(interval=.25)
 
