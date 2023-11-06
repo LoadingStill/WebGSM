@@ -28,7 +28,8 @@ def home():
 
     # Pass these variables to the 'home.html' template
     return render_template('home.html', arma3_installed=arma3_installed, cs2_installed=cs2_installed,
-                           factorio_installed=factorio_installed, dst_installed=dst_installed, eco_installed=eco_installed)
+                           factorio_installed=factorio_installed, dst_installed=dst_installed,
+                           eco_installed=eco_installed)
 
 
 
