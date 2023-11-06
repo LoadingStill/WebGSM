@@ -32,7 +32,6 @@ def home():
                            eco_installed=eco_installed)
 
 
-
 @app.route('/games/cs2')
 def cs2_page():
     return render_template('games/cs2.html')
