@@ -30,3 +30,13 @@ body {
     position: fixed; /* or position: absolute; */
     left: 0;
 }
+
+/* Define the style for the grayscale game buttons */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Define the style for the full-color game buttons */
+.full-color {
+    filter: grayscale(0%);
+}
