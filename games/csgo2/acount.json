@@ -1,4 +1,5 @@
 {
   "username": "csgoserver",
-  "password": ""
+  "password": "",
+  "password_required": true
 }
