@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import subprocess
 import os
 import psutil
+import json
 import time
 
 
@@ -15,7 +16,14 @@ def home():
 
 @app.route('/games/cs2')
 def cs2_page():
-    return render_template('games/cs2.html')
+    # Read the content of the JSON file for CS:GO2
+    with open('games/cs2/server_info.json') as json_file:
+        data = json.load(json_file)
+    # Check if "Installed" is "True" in the JSON data
+    installed = data.get("Installed") == "True"
+    # Define the grayscale filter based on the condition
+    grayscale_filter = 'grayscale(100%)' if not installed else ''
+    return render_template('games/cs2.html', grayscale_filter=grayscale_filter)
 
 
 @app.route('/games/factorio')
@@ -50,7 +58,18 @@ def dst_page():
 
 @app.route('/games/arma3')
 def arma3_page():
-    return render_template('games/arma3.html')
+    # Read the content of the JSON file
+    with open('games/arma3/server_info.json') as json_file:
+        data = json.load(json_file)
+
+    # Check if "Installed" is "True" in the JSON data
+    installed = data.get("Installed") == "True"
+
+    # Define the grayscale filter based on the condition
+    grayscale_filter = 'grayscale(100%)' if not installed else ''
+
+    return render_template('games/arma3.html', grayscale_filter=grayscale_filter)
+
 
 
 def get_cpu_usage():
