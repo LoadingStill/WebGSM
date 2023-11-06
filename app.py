@@ -3,7 +3,6 @@ import subprocess
 import os
 import psutil
 import json
-from game_info_utils import get_game_info
 
 
 app = Flask(__name__)
@@ -11,20 +10,26 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    games = {
-        "arma3": "Arma 3",
-        "cs2": "Counter-Strike 2",
-        "factorio": "Factorio",
-        "dst": "Don't Starve Together",
-        "eco": "Eco",
-        # Add more games here
-    }
+    # Read the content of the JSON files for each game
+    with open('games/arma3/server_info.json') as arma3_json_file:
+        arma3_installed = json.load(arma3_json_file).get("Installed") == False
 
-    game_info = {}
-    for game_id, game_name in games.items():
-        game_info[game_name] = get_game_info(game_id)
+    with open('games/cs2/server_info.json') as cs2_json_file:
+        cs2_installed = json.load(cs2_json_file).get("Installed") == False
 
-    return render_template('home.html', game_info=game_info)
+    with open('games/factorio/server_info.json') as factorio_json_file:
+        factorio_installed = json.load(factorio_json_file).get("Installed") == False
+
+    with open('games/dst/server_info.json') as factorio_json_file:
+        dst_installed = json.load(factorio_json_file).get("Installed") == False
+
+    with open('games/eco/server_info.json') as factorio_json_file:
+        eco_installed = json.load(factorio_json_file).get("Installed") == False
+
+    # Pass these variables to the 'home.html' template
+    return render_template('home.html', arma3_installed=arma3_installed, cs2_installed=cs2_installed,
+                           factorio_installed=factorio_installed, dst_installed=dst_installed,
+                           eco_installed=eco_installed)
 
 
 @app.route('/games/cs2')
