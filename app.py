@@ -71,7 +71,6 @@ def arma3_page():
     return render_template('games/arma3.html', grayscale_filter=grayscale_filter)
 
 
-
 def get_cpu_usage():
     return psutil.cpu_percent(interval=.25)
 
