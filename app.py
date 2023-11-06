@@ -38,6 +38,21 @@ def install_factorio():
         return "Invalid game specified."
 
 
+@app.route('/games/eco')
+def eco_page():
+    return render_template('games/eco.html')
+
+
+@app.route('/games/dst')
+def dst_page():
+    return render_template('games/dst.html')
+
+
+@app.route('/games/arma3')
+def arma3_page():
+    return render_template('games/arma3.html')
+
+
 def get_cpu_usage():
     return psutil.cpu_percent(interval=.25)
 
