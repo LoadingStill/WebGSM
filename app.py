@@ -10,19 +10,25 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    # Read the content of the JSON files for each game
+    with open('games/arma3/server_info.json') as arma3_json_file:
+        arma3_installed = json.load(arma3_json_file).get("Installed") == True
+
+    with open('games/cs2/server_info.json') as cs2_json_file:
+        cs2_installed = json.load(cs2_json_file).get("Installed") == True
+
+    with open('games/factorio/server_info.json') as factorio_json_file:
+        factorio_installed = json.load(factorio_json_file).get("Installed") == True
+
+    # Pass these variables to the 'home.html' template
+    return render_template('home.html', arma3_installed=arma3_installed, cs2_installed=cs2_installed,
+                           factorio_installed=factorio_installed)
+
 
 
 @app.route('/games/cs2')
 def cs2_page():
-    # Read the content of the JSON file for CS:GO2
-    with open('games/cs2/server_info.json') as json_file:
-        data = json.load(json_file)
-    # Check if "Installed" is "True" in the JSON data
-    installed = data.get("Installed") == "True"
-    # Define the grayscale filter based on the condition
-    grayscale_filter = 'grayscale(100%)' if not installed else ''
-    return render_template('games/cs2.html', grayscale_filter=grayscale_filter)
+    return render_template('games/cs2.html')
 
 
 @app.route('/games/factorio')
@@ -57,12 +63,9 @@ def dst_page():
 
 @app.route('/games/arma3')
 def arma3_page():
-    # Read the content of the JSON file
     with open('games/arma3/server_info.json') as json_file:
         data = json.load(json_file)
-    # Check if "Installed" is "True" in the JSON data
-    installed = data.get("Installed") == "True"
-    # Define the grayscale filter based on the condition
+    installed = data.get("Installed") == True
     grayscale_filter = 'grayscale(100%)' if not installed else ''
     return render_template('games/arma3.html', grayscale_filter=grayscale_filter)
 
