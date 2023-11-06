@@ -60,13 +60,10 @@ def arma3_page():
     # Read the content of the JSON file
     with open('games/arma3/server_info.json') as json_file:
         data = json.load(json_file)
-
     # Check if "Installed" is "True" in the JSON data
     installed = data.get("Installed") == "True"
-
     # Define the grayscale filter based on the condition
     grayscale_filter = 'grayscale(100%)' if not installed else ''
-
     return render_template('games/arma3.html', grayscale_filter=grayscale_filter)
 
 
