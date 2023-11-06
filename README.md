@@ -35,7 +35,7 @@ Contributor:
 We invite you to join us on this exciting journey. Whether you're a developer, designer, or simply someone who shares our passion for gaming and Linux, there's a place for you in our community. Contribute your ideas, code, or expertise and help shape the future of LGSM-WebGUI.
 
 ## GitHub Wiki and Issue Tracker
-For additional information, tutorials, and resources, please check out our [GitHub Wiki](https://github.com/LoadingStill/LGSM-WebGUI/wiki) section. If you encounter any issues or have suggestions for improvement, please visit the [Issues or Feature Request](https://github.com/LoadingStill/LGSM-WebGUI/issues) section to report them.
+For additional information, tutorials, and resources, please check out our [Gitea Wiki](https://git.howtoit.com/LoadingStill/WebGSM/wiki) section. If you encounter any issues or have suggestions for improvement, please visit the [Issues or Feature Request](https://git.howtoit.com/LoadingStill/WebGSM/issues) section to report them.
 
 ## Stay Connected
 Stay informed about the latest developments, releases, and announcements by engaging with our GitHub repository. Together, we're revolutionizing game server management with LGSM-WebGUI.
