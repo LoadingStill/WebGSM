@@ -26,10 +26,13 @@ def home():
     with open('games/eco/server_info.json') as factorio_json_file:
         eco_installed = json.load(factorio_json_file).get("Installed") == False
 
+    with open('games/minecraftJava/server_info.json') as minecraftJava_json_file:
+        minecraftJava_installed = json.load(minecraftJava_json_file).get("Installed") == False
+
     # Pass these variables to the 'home.html' template
     return render_template('home.html', arma3_installed=arma3_installed, cs2_installed=cs2_installed,
                            factorio_installed=factorio_installed, dst_installed=dst_installed,
-                           eco_installed=eco_installed)
+                           eco_installed=eco_installed, minecraftJava_installed=minecraftJava_installed)
 
 
 @app.route('/games/cs2')
