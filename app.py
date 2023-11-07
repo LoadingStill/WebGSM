@@ -77,11 +77,7 @@ def dst_page():
 
 @app.route('/games/arma3')
 def arma3_page():
-    with open('games/arma3/server_info.json') as json_file:
-        data = json.load(json_file)
-    installed = data.get("Installed") == True
-    grayscale_filter = 'grayscale(100%)' if not installed else ''
-    return render_template('games/arma3.html', grayscale_filter=grayscale_filter)
+    return render_template('games/arma3.html')
 
 
 def get_cpu_usage():
@@ -92,6 +88,35 @@ def get_cpu_usage():
 def get_cpu_usage_route():
     cpu_usage = get_cpu_usage()
     return jsonify({'cpu_usage': cpu_usage})
+
+
+def get_ram_usage():
+    return psutil.virtual_memory().percent
+
+
+@app.route('/get_ram_usage')
+def get_ram_usage_route():
+    ram_usage = get_ram_usage()
+    return jsonify({'ram_usage': ram_usage})
+
+def get_disk_usage():
+    return psutil.disk_usage('/').percent
+
+
+@app.route('/get_disk_usage')
+def get_disk_usage_route():
+    disk_usage = get_disk_usage()
+    return jsonify({'disk_usage': disk_usage})
+
+
+def get_network_usage():
+    return psutil.network_percent(interval=1)
+
+
+@app.route('/get_network_usage')
+def get_network_usage_route():
+    network_usage = get_network_usage()
+    return jsonify({'network_usage': network_usage})
 
 
 @app.route('/run-script', methods=['POST'])

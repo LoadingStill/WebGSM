@@ -19,13 +19,39 @@
                 $('#cpu-usage').text(data.cpu_usage.toFixed(2) + '%');
             });
         }
-
         setInterval(updateCPUUsage, 1000); // Update every 5 seconds
+    </script>
+    <script>
+        function updateRAMUsage() {
+            $.get('/get_ram_usage', function(data) {
+                $('#ram-usage').text(data.ram_usage.toFixed(2) + '%');
+            });
+        }
+        setInterval(updateRAMUsage, 1000); // Update every 5 seconds
+    </script>
+    <script>
+        function updateDISKUsage() {
+            $.get('/get_disk_usage', function(data) {
+                $('#disk-usage').text(data.disk_usage.toFixed(2) + '%');
+            });
+        }
+        setInterval(updateDISKUsage, 1000); // Update every 5 seconds
+    </script>
+    <script>
+        function updateNETWORKUsage() {
+            $.get('/get_network_usage', function(data) {
+                $('#network-usage').text(data.network_usage.toFixed(2) + '%');
+            });
+        }
+        setInterval(updateNETWORKUsage, 1000); // Update every 5 seconds
     </script>
 </head>
 <body>
     <div class="sidebar">
-        <h1>CPU Usage: <span id="cpu-usage">Loading...</span></h1>
+        <p>CPU Usage: <span id="cpu-usage">Loading...</span></p>
+        <p>RAM Usage: <span id="ram-usage">Loading...</span></p>
+        <p>Disk Usage: <span id="disk-usage">Loading...</span></p>
+        <p>Network Usage: <span id="network-usage">Loading...</span></p>
         <!-- Three resized image buttons with links -->
     </div>
 <div class="grid-container">
