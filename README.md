@@ -1,7 +1,8 @@
 # About WebGSM
 
 Welcome to WebGSM, is a user-friendly web based graphical interface for LinuxGSM (Linux Game Server Managers).  
-**DISCLAIMER** - WebSGM and LinuxGSM are not the same project, and in no way is WebGSM an offical or offically supported by LinuxGSM.  This is just my personal project.  I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discussions/4371) about use of LinuxGSM name in my project.
+**DISCLAIMER** - WebSGM and LinuxGSM are not the same project, and in no way is WebGSM an offical or offically supported by LinuxGSM.  This is just my personal project.  
+I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discussions/4371) about use of LinuxGSM name in my project.
 
 ## Installation
 - Officially Debian 11 is supported.
