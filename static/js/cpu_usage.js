@@ -1,4 +1,3 @@
-// cpu_usage.js
 function updateCPUUsage() {
     $.get('/get_cpu_usage', function(data) {
         $('#cpu-usage').text(data.cpu_usage.toFixed(2) + '%');
