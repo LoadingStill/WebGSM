@@ -7,6 +7,7 @@ Welcome to WebGSM, is a user-friendly web based graphical interface for WebGSM (
 - Go to this files page [WebGSM-Installer.sh](https://git.howtoit.com/LoadingStill/WebGSM/src/branch/main/WebGSM-Installer.sh) and click the download icon on the top right of the file.
 - Change the files permission to allow execution `sudo chmod +x ~/Downloads/WebGSM-Installer.sh`
 - Run the file `sudo ~/Downloads/WebGSM-Installer.sh`
+- I am working on a more detailed guide for installing WebGSM on the repo wiki, [Installation](https://git.howtoit.com/LoadingStill/WebGSM/wiki/Installation).
 
 ## Uninstalling
 - Change the files permission to allow execution `sudo chmod +x /var/www/WebGSM/uninstall.sh`
