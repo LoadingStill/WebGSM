@@ -44,7 +44,7 @@ def factorio_page():
 
 @app.route('/games/minecraftJava')
 def minecraftJava_page():
-    return render_template('games/minecraftJava.html')
+    return render_template('games/minecraftJava.html', title='Minecraft Java Edition')
 
 
 @app.route('/install_factorio', methods=['POST'])
