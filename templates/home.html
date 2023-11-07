@@ -13,7 +13,6 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--   <script src="{{ url_for('static', filename='js/cpu_usage.js') }}"></script>  -->
-    </script>
     <script>
         function updateCPUUsage() {
             $.get('/get_cpu_usage', function(data) {
@@ -46,8 +45,12 @@
         <a id="eco-button" href="{{ url_for('eco_page') }}">
             <img class="game-button {% if eco_installed %}grayscale{% endif %}" src="https://cdn.cloudflare.steamstatic.com/steam/apps/382310/library_600x900.jpg?t=1562708011" alt="Eco">
         </a>
+        <a id="minecraftJava-button" href="{{ url_for('minecraftJava_page') }}">
+            <img class="game-button {% if eco_installed %}grayscale{% endif %}" src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" alt="Minecraft Java">
+        </a>
     </div>
 </div>
 
 </body>
 </html>
+

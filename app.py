@@ -42,6 +42,11 @@ def factorio_page():
     return render_template('games/factorio.html')
 
 
+@app.route('/games/minecraftJava')
+def minecraftJava_page():
+    return render_template('games/minecraftJava.html')
+
+
 @app.route('/install_factorio', methods=['POST'])
 def install_factorio():
     game = request.form.get('game')
@@ -77,7 +82,7 @@ def arma3_page():
 
 
 def get_cpu_usage():
-    return psutil.cpu_percent(interval=.25)
+    return psutil.cpu_percent(interval=1)
 
 
 @app.route('/get_cpu_usage')
