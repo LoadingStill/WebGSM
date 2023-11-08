@@ -16,6 +16,28 @@ body {
     top: 0;
 }
 
+/* Style the sidebar buttons */
+.sidebar-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #555;
+    border: none;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-buttons button:hover {
+    background-color: #777;
+}
+
+.sidebar-buttons button:focus {
+    outline: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
