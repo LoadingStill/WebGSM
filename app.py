@@ -12,27 +12,27 @@ app = Flask(__name__)
 def home():
     # Read the content of the JSON files for each game
     with open('games/arma3/server_info.json') as arma3_json_file:
-        arma3_installed = json.load(arma3_json_file).get("Installed") == False
+        arma3_installed = json.load(arma3_json_file).get("Installed") is False
 
     with open('games/cs2/server_info.json') as cs2_json_file:
-        cs2_installed = json.load(cs2_json_file).get("Installed") == False
+        cs2_installed = json.load(cs2_json_file).get("Installed") is False
 
     with open('games/factorio/server_info.json') as factorio_json_file:
-        factorio_installed = json.load(factorio_json_file).get("Installed") == False
+        factorio_installed = json.load(factorio_json_file).get("Installed") is False
 
     with open('games/dst/server_info.json') as factorio_json_file:
-        dst_installed = json.load(factorio_json_file).get("Installed") == False
+        dst_installed = json.load(factorio_json_file).get("Installed") is False
 
     with open('games/eco/server_info.json') as factorio_json_file:
-        eco_installed = json.load(factorio_json_file).get("Installed") == False
+        eco_installed = json.load(factorio_json_file).get("Installed") is False
 
-    with open('games/minecraftJava/server_info.json') as minecraftJava_json_file:
-        minecraftJava_installed = json.load(minecraftJava_json_file).get("Installed") == False
+    with open('games/minecraftjava/server_info.json') as minecraftjava_json_file:
+        minecraftjava_installed = json.load(minecraftjava_json_file).get("Installed") is False
 
     # Pass these variables to the 'home.html' template
     return render_template('home.html', arma3_installed=arma3_installed, cs2_installed=cs2_installed,
                            factorio_installed=factorio_installed, dst_installed=dst_installed,
-                           eco_installed=eco_installed, minecraftJava_installed=minecraftJava_installed)
+                           eco_installed=eco_installed, minecraftjava_installed=minecraftjava_installed)
 
 
 @app.route('/games/cs2')
@@ -45,9 +45,9 @@ def factorio_page():
     return render_template('games/factorio.html')
 
 
-@app.route('/games/minecraftJava')
-def minecraftJava_page():
-    return render_template('games/minecraftJava.html', title='Minecraft Java Edition')
+@app.route('/games/minecraftjava')
+def minecraftjava_page():
+    return render_template('games/minecraftjava.html', title='Minecraft Java Edition')
 
 
 @app.route('/install_factorio', methods=['POST'])
@@ -98,6 +98,7 @@ def get_ram_usage():
 def get_ram_usage_route():
     ram_usage = get_ram_usage()
     return jsonify({'ram_usage': ram_usage})
+
 
 def get_disk_usage():
     return psutil.disk_usage('/').percent

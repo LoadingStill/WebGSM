@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "baseGameTemplate.html" %}
 
-</body>
-</html>
+{% block title %}Minecraft Java Edition{% endblock %}
+
+{% block title_block %}
+    <h1>Title</h1>
+{% endblock %}
+
+{% block sidebar %}
+    <h3>Sidebar</h3>
+        <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc" target="_blank"><button>Official Website</button></a>
+{% endblock %}
+
+{% block body %}
+    <p>Body</p>
+    <!-- Rest of the page content -->
+{% endblock %}
+
+{% block footer %}
+    <p>Footer</p>
+    <!-- Footer content -->
+{% endblock %}
