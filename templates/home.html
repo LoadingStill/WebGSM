@@ -39,11 +39,11 @@
     </script>
     <script>
         function updateNETWORKUsage() {
-            $.get('/get_network_usage', function(data) {
-                $('#network-usage').text(data.network_usage.toFixed(2) + '%');
+            $.get('/get_network_percent', function(data) {
+                $('#network-percent').text(data.network_percent.toFixed(2) + '%');
             });
         }
-        setInterval(updateNETWORKUsage, 1000); // Update every 5 seconds
+        setInterval(updateNETWORKUsage, 10000); // Update every 5 seconds
     </script>
 </head>
 <body>
