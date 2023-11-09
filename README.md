@@ -20,8 +20,7 @@ I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discuss
 WebGSM is an easier way of managing game servers on Linux using the well-established LinuxGSM toolset. We recognize the importance of efficient server administration, and our goal is to make it accessible to both novices and experienced users alike.
 
 ## Current Progress
-- November 8, 2023
-### Home page
+### November 8, 2023
 ![Game Page](https://git.howtoit.com/LoadingStill/WebGSM/src/branch/main/.gitea/ProjectUpdate/Nov-8-2023-Game-Page-Update.png)  
 ![Home Page](https://git.howtoit.com/LoadingStill/WebGSM/src/branch/main/.gitea/ProjectUpdate/Nov-8-2023-Status-Home-Page-Update.png)
 
