@@ -110,16 +110,6 @@ def get_disk_usage_route():
     return jsonify({'disk_usage': disk_usage})
 
 
-def get_network_percent():
-    return psutil.network_percent(interval=1)
-
-
-@app.route('/get_network_percent')
-def get_network_percent_route():
-    network_percent = get_network_percent()
-    return jsonify({'network_percent': network_percent})
-
-
 @app.route('/run-script', methods=['POST'])
 def run_script():
     script_path = os.path.join(os.path.dirname(__file__), 'gamesFolder', 'factorio', 'factorioInstall.sh')
