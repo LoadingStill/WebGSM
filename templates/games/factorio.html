@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Factorio</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='game.css') }}">
-</head>
-<body>
-    <div class="sidebar">
-        <h3>Sidebar</h3>
-        <form action="/install_factorio" method="post">
-            <button class="installButton" title="Install Factorio Server">Install</button><br>
-            <input type="hidden" name="game" value="factorio">
-        </form>
+{% extends "baseGameTemplate.html" %}
+
+{% block title %}Factorio{% endblock %}
+
+{% block title_block %}
+    <h1>Factorio</h1>
+{% endblock %}
+
+{% block sidebar %}
+    <div class="sidebar-images">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg?t=1597145422" alt="Factorio Poster">
+    </div>
+
+    <div class="sidebar-buttons">
+        <a href="https://www.factorio.com/" target="_blank"><button title="https://www.factorio.com/">Official Website</button></a><br>
+        <a href="https://store.steampowered.com/app/427520/Factorio/" target="_blank"><button title="https://store.steampowered.com/app/427520/Factorio/">Steam Page</button></a><br>
         <button class="startButton" title="Start Factorio Server">Start</button><br>
         <button class="stopButton" title="Stop Factorio Server">Stop</button><br>
         <button class="restartButton" title="Restart Factorio Server">Restart</button><br>
@@ -24,36 +26,14 @@
         <button class="backupButton" title="Backup Factorio Server">Backup</button><br>
         <button class="monitorButton" title="Monitor Factorio Server">Monitor</button><br>
     </div>
-    <div class="content">
-        <h1>Welcome to the Factorio Game Page</h1>
-        <p>This is the Factorio game content.</p>
-        <!-- Add an empty div to display script output -->
-        <div id="output"></div>
-    </div>
-    <script>
-        function runScript() {
-            // Change button color to grey while the script is running
-            $('.installButton').css('background-color', 'grey');
+{% endblock %}
 
-            // Send a request to your Flask server to run the script
-            $.ajax({
-                url: '/run-script', // URL to trigger the Python script execution
-                method: 'POST',
-                success: function(data) {
-                    // Display the output in a new browser tab
-                    window.open('data:text/plain,' + encodeURIComponent(data), '_blank');
+{% block body %}
+    <p>Body</p>
+    <!-- Rest of the page content -->
+{% endblock %}
 
-                    // Change button color to green
-                    $('.installButton').css('background-color', 'green');
-                },
-                error: function() {
-                    alert('An error occurred while running the script.');
-                }
-            });
-        }
-
-        // Attach the runScript function to the install button's click event
-        $('.installButton').click(runScript);
-    </script>
-</body>
-</html>
+{% block footer %}
+    <p>Footer</p>
+    <!-- Footer content -->
+{% endblock %}

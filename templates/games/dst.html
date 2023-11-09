@@ -1,14 +1,31 @@
 {% extends "baseGameTemplate.html" %}
 
-{% block title %}Minecraft Java Edition{% endblock %}
+{% block title %}Don't Starve Together{% endblock %}
 
 {% block title_block %}
-    <h1>Title</h1>
+    <h1>Don't Starve Together</h1>
 {% endblock %}
 
 {% block sidebar %}
-    <h3>Sidebar</h3>
-        <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc" target="_blank"><button>Official Website</button></a>
+    <div class="sidebar-images">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/322330/library_600x900.jpg?t=1656100830" alt="Don't Starve Together Poster">
+    </div>
+
+    <div class="sidebar-buttons">
+        <a href="https://www.klei.com/games/dont-starve-together" target="_blank"><button title="https://www.klei.com/games/dont-starve-together">Official Website</button></a><br>
+        <a href="https://store.steampowered.com/app/322330/Dont_Starve_Together/" target="_blank"><button title="https://store.steampowered.com/app/322330/Dont_Starve_Together/">Steam Page</button></a><br>
+        <button class="startButton" title="Start Don't Starve Together Server">Start</button><br>
+        <button class="stopButton" title="Stop Don't Starve Together Server">Stop</button><br>
+        <button class="restartButton" title="Restart Don't Starve Together Server">Restart</button><br>
+        <button class="consoleButton" title="Console Don't Starve Together Server">Console</button><br>
+        <button class="updateButton" title="Update Don't Starve Together Server">Update</button><br>
+        <button class="force-updateButton" title="force-update Don't Starve Together Server">Force-Update</button><br>
+        <button class="validateButton" title="Validate Don't Starve Together Server">Validate</button><br>
+        <button class="detailsButton" title="Details Don't Starve Together Server">Details</button><br>
+        <button class="debugButton" title="Debug Don't Starve Together Server">Debug</button><br>
+        <button class="backupButton" title="Backup Don't Starve Together Server">Backup</button><br>
+        <button class="monitorButton" title="Monitor Don't Starve Together Server">Monitor</button><br>
+    </div>
 {% endblock %}
 
 {% block body %}

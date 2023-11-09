@@ -1,14 +1,30 @@
 {% extends "baseGameTemplate.html" %}
 
-{% block title %}Minecraft Java Edition{% endblock %}
+{% block title %}Minecraft Java{% endblock %}
 
 {% block title_block %}
-    <h1>Title</h1>
+    <h1>Minecraft Java</h1>
 {% endblock %}
 
 {% block sidebar %}
-    <h3>Sidebar</h3>
-        <a href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc" target="_blank"><button>Official Website</button></a>
+    <div class="sidebar-images">
+        <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" alt="Minecraft Java Poster">
+    </div>
+
+    <div class="sidebar-buttons">
+        <a href="https://www.minecraft.net/en-us/about-minecraft" target="_blank"><button title="https://www.minecraft.net/en-us/about-minecraft">Official Website</button></a><br>
+        <button class="startButton" title="Start Minecraft Java Server">Start</button><br>
+        <button class="stopButton" title="Stop Minecraft Java Server">Stop</button><br>
+        <button class="restartButton" title="Restart Minecraft Java Server">Restart</button><br>
+        <button class="consoleButton" title="Console Minecraft Java Server">Console</button><br>
+        <button class="updateButton" title="Update Minecraft Java Server">Update</button><br>
+        <button class="force-updateButton" title="force-update Minecraft Java Server">Force-Update</button><br>
+        <button class="validateButton" title="Validate Minecraft Java Server">Validate</button><br>
+        <button class="detailsButton" title="Details Minecraft Java Server">Details</button><br>
+        <button class="debugButton" title="Debug Minecraft Java Server">Debug</button><br>
+        <button class="backupButton" title="Backup Minecraft Java Server">Backup</button><br>
+        <button class="monitorButton" title="Monitor Minecraft Java Server">Monitor</button><br>
+    </div>
 {% endblock %}
 
 {% block body %}
