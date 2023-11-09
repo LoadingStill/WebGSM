@@ -22,7 +22,7 @@ WebGSM is an easier way of managing game servers on Linux using the well-establi
 ## Current Progress
 - November 8, 2023
 ### Home page
-![Game Page](https://git.howtoit.com/LoadingStill/WebGSM/src/branch/main/.gitea/ProjectUpdate/Nov-8-2023-Game-Page-Update.png)
+![Game Page](https://git.howtoit.com/LoadingStill/WebGSM/src/branch/main/.gitea/ProjectUpdate/Nov-8-2023-Game-Page-Update.png)  
 ![Home Page](https://git.howtoit.com/LoadingStill/WebGSM/src/branch/main/.gitea/ProjectUpdate/Nov-8-2023-Status-Home-Page-Update.png)
 
 
