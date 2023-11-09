@@ -2,16 +2,16 @@
 
     "arma3": {
         "posterImage": "https://cdn.cloudflare.steamstatic.com/steam/apps/107410/library_600x900.jpg?t=1568818863",
-        "bannerImage": ""
-        "steamPageURL": "https://store.steampowered.com/app/107410/Arma_3/"
-        "officalSiteURL": "https://arma3.com/"
+        "bannerImage": "",
+        "steamPageURL": "https://store.steampowered.com/app/107410/Arma_3/",
+        "officalSiteURL": "https://arma3.com/",
     }
 
     "cs2": {
         "posterImage": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg?t=1695852468",
-        "bannerImage": ""
-        "steamPageURL": "https://store.steampowered.com/app/730/CounterStrike_2/"
-        "officalSiteURL": "https://www.counter-strike.net/cs2"
+        "bannerImage": "",
+        "steamPageURL": "https://store.steampowered.com/app/730/CounterStrike_2/",
+        "officalSiteURL": "https://www.counter-strike.net/cs2",
     }
 
 }
