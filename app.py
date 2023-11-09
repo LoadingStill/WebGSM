@@ -3,6 +3,8 @@ import subprocess
 import os
 import psutil
 import json
+import paramiko #For SSH
+from flask_socketio import SocketIO #For live updates in SSH
 
 
 app = Flask(__name__)
