@@ -15,7 +15,7 @@ GREEN="\033[32m"
 RESET="\033[0m"
 
 # Make the folder where this will be stored
-mkdir /var/www
+sudo mkdir /var/www
 
 # Download file to /var/www folder
 wget -O /var/www/webgsm.zip https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip
