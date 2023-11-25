@@ -5,7 +5,7 @@
 # Installs the needed software
 sudo apt update
 sudo apt install python3-venv gcc python3-dev python3-pip unzip curl nala -y
-sudo dpkg --add-architecture i386 -y
+sudo dpkg --add-architecture i386
 sudo nala update
 #pip install --no-binary :all: psutil
 
