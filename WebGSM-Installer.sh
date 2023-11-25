@@ -10,7 +10,7 @@ sudo apt install python3-venv gcc python3-dev python3-pip unzip -y
 NEW_USER=$SUDO_USER
 
 # Define ANSI color codes
-# RED="\033[31m"
+RED="\033[31m"
 GREEN="\033[32m"
 RESET="\033[0m"
 
@@ -20,23 +20,10 @@ sudo mkdir /var/www
 # Download file and unzip into /var/www folder
 wget https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip -O /tmp/main.zip && sudo unzip /tmp/main.zip -d /var/www/
 
-# Remove no longer needed zip file
-# rm /var/www/webgsm.zip
 
 # Tells user what has completed
 echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
 
-# Create a virtual environment
-# python3 -m venv /var/www/webgsm/venv
-
-# Activate the virtual environment
-# source /var/www/webgsm/venv/bin/activate
-
-# Install the psutil module
-# pip install psutil
-
-# Exit the virtual environment
-# deactivate
 
 # make /var/www/WebGSM/run.sh executable
 sudo chmod +x /var/www/webgsm/run.sh
