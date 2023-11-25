@@ -3,8 +3,8 @@ import subprocess
 import os
 import psutil
 import json
-import paramiko #For SSH
-from flask_socketio import SocketIO #For live updates in SSH
+# import paramiko #For SSH
+# from flask_socketio import SocketIO #For live updates in SSH
 
 
 app = Flask(__name__)
@@ -50,6 +50,16 @@ def factorio_page():
 @app.route('/games/minecraftjava')
 def minecraftjava_page():
     return render_template('games/minecraftjava.html', title='Minecraft Java Edition')
+
+
+@app.route('/install_minecraftjava', methods=['POST'])
+def install_minecraftjava():
+    try:
+        # Use sudo to run the script with elevated privileges
+        subprocess.run(['sudo', 'bash', '/path/to/installMinecraftJava.sh'], check=True)
+        return jsonify({'success': True, 'message': 'Installation successful'})
+    except subprocess.CalledProcessError as e:
+        return jsonify({'success': False, 'message': f'Error: {e}'})
 
 
 @app.route('/install_factorio', methods=['POST'])

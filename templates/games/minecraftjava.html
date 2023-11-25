@@ -13,7 +13,21 @@
 
     <div class="sidebar-buttons">
         <a href="https://www.minecraft.net/en-us/about-minecraft" target="_blank"><button title="https://www.minecraft.net/en-us/about-minecraft">Official Website</button></a><br>
-        <button class="installButton" title="Start Game Server">Install</button><br>
+        <button class="installButton" title="Start Game Server" onclick="installMinecraftJava()">Install</button>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+            function installMinecraftJava() {
+                        $.post("/install_minecraftjava", function(data) {
+                    if (data.success) {
+                        alert("Installation successful");
+                    } else {
+                        alert("Installation failed: " + data.message);
+                    }
+                });
+            }
+        </script>
+
+
         <button class="startButton" title="Start Minecraft Java Server">Start</button><br>
         <button class="stopButton" title="Stop Minecraft Java Server">Stop</button><br>
         <button class="restartButton" title="Restart Minecraft Java Server">Restart</button><br>

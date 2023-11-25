@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="jquery-3.6.4.min.js" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="jQuery" />
+    </properties>
+    <CLASSES />
+    <DOCUMENTATION>
+      <root url="https://code.jquery.com/jquery-3.6.4.min.js" />
+    </DOCUMENTATION>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
