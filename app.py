@@ -56,7 +56,7 @@ def minecraftjava_page():
 def install_minecraftjava():
     try:
         # Use sudo to run the script with elevated privileges
-        subprocess.run(['sudo', 'bash', '/path/to/installMinecraftJava.sh'], check=True)
+        subprocess.run(['sudo', 'bash', '/var/www/webgsm/games/minecraftjava/installMinecraftJava.sh'], check=True)
         return jsonify({'success': True, 'message': 'Installation successful'})
     except subprocess.CalledProcessError as e:
         return jsonify({'success': False, 'message': f'Error: {e}'})
