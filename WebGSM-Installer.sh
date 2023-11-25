@@ -17,14 +17,11 @@ RESET="\033[0m"
 # Make the folder where this will be stored
 sudo mkdir /var/www
 
-# Download file to /var/www folder
-wget -O /var/www/webgsm.zip https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip
-
-# Unzip file
-unzip /var/www/ webgsm.zip -d /var/www/
+# Download file and unzip into /var/www folder
+wget https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip -O /tmp/main.zip && sudo unzip /tmp/main.zip -d /var/www/
 
 # Remove no longer needed zip file
-rm /var/www/webgsm.zip
+# rm /var/www/webgsm.zip
 
 # Tells user what has completed
 echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
@@ -66,13 +63,13 @@ WantedBy=multi-user.target
 EOL
 
 # Reload the systemd manager to recognize the new service
-systemctl daemon-reload
+sudo systemctl daemon-reload
 
 # Enable the service to start on boot
-systemctl enable webgsm.service
+sudo systemctl enable webgsm.service
 
 # Start the service
-systemctl start webgsm.service
+sudo systemctl start webgsm.service
 
 echo -e "${GREEN}Start at boot enabled. ${RESET}"
 
