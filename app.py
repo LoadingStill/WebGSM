@@ -3,8 +3,8 @@ import subprocess
 import os
 import psutil
 import json
-import paramiko #For SSH
-from flask_socketio import SocketIO #For live updates in SSH
+# import paramiko #For SSH
+# from flask_socketio import SocketIO #For live updates in SSH
 
 
 app = Flask(__name__)
@@ -52,19 +52,14 @@ def minecraftjava_page():
     return render_template('games/minecraftjava.html', title='Minecraft Java Edition')
 
 
-@app.route('/install_factorio', methods=['POST'])
-def install_factorio():
-    game = request.form.get('game')
-
-    if game == 'factorio':
-        try:
-            subprocess.run(['chmod', '+x', 'games/factorio/installFactorio.sh'], check=True)
-            subprocess.run(['games/factorio/installFactorio.sh'], check=True)
-            return "Factorio installation started."
-        except subprocess.CalledProcessError as e:
-            return f"Error: {e.returncode}, {e.output.decode()}"
-    else:
-        return "Invalid game specified."
+@app.route('/install_minecraftjava', methods=['POST'])
+def install_minecraftjava():
+    try:
+        # Use sudo to run the script with elevated privileges
+        subprocess.run(['sudo', 'bash', '/var/www/webgsm/games/minecraftjava/installMinecraftJava.sh'], check=True)
+        return jsonify({'success': True, 'message': 'Installation successful'})
+    except subprocess.CalledProcessError as e:
+        return jsonify({'success': False, 'message': f'Error: {e}'})
 
 
 @app.route('/games/eco')
