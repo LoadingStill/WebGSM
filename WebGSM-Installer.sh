@@ -14,9 +14,6 @@ NEW_USER=$SUDO_USER
 GREEN="\033[32m"
 RESET="\033[0m"
 
-# Define the URL of the file you want to download from Gitea
-GITEA_FILE_URL="https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip"
-
 # Make the folder where this will be stored
 mkdir /var/www
 
@@ -47,7 +44,7 @@ deactivate
 # make /var/www/WebGSM/run.sh executable
 sudo chmod +x /var/www/WebGSM/run.sh
 
-# Adds user to nologin group
+# Adds user to no-login group
 sudo useradd -r -s /usr/sbin/nologin "$NEW_USER"
 
 # Change ownership of file to group lgms-webgui
@@ -82,5 +79,5 @@ echo -e "${GREEN}Start at boot enabled. ${RESET}"
 directory="/var/www/WebGSM"
 
 # Use the find command with sudo to locate all .sh files and make them executable
-# This allows execution of all .sh files for game instlation and edditing.
+# This allows execution of all .sh files for game installation and editing.
 sudo find "$directory" -type f -name "*.sh" -exec sudo chmod +x {} \;
