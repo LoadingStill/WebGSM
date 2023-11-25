@@ -62,21 +62,6 @@ def install_minecraftjava():
         return jsonify({'success': False, 'message': f'Error: {e}'})
 
 
-@app.route('/install_factorio', methods=['POST'])
-def install_factorio():
-    game = request.form.get('game')
-
-    if game == 'factorio':
-        try:
-            subprocess.run(['chmod', '+x', 'games/factorio/installFactorio.sh'], check=True)
-            subprocess.run(['games/factorio/installFactorio.sh'], check=True)
-            return "Factorio installation started."
-        except subprocess.CalledProcessError as e:
-            return f"Error: {e.returncode}, {e.output.decode()}"
-    else:
-        return "Invalid game specified."
-
-
 @app.route('/games/eco')
 def eco_page():
     return render_template('games/eco.html')
