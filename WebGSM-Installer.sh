@@ -18,22 +18,22 @@ RESET="\033[0m"
 mkdir /var/www
 
 # Download file to /var/www folder
-wget -O /var/www/WebGSM.zip https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip
+wget -O /var/www/webgsm.zip https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip
 
 # Unzip file
-unzip /var/www/WebGSM.zip -d /var/www/
+unzip /var/www/ webgsm.zip -d /var/www/
 
 # Remove no longer needed zip file
-rm /var/www/WebGSM.zip
+rm /var/www/webgsm.zip
 
 # Tells user what has completed
 echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
 
 # Create a virtual environment
-python3 -m venv /var/www/WebGSM/venv
+python3 -m venv /var/www/webgsm/venv
 
 # Activate the virtual environment
-source /var/www/WebGSM/venv/bin/activate
+source /var/www/webgsm/venv/bin/activate
 
 # Install the psutil module
 pip install psutil
@@ -42,16 +42,17 @@ pip install psutil
 deactivate
 
 # make /var/www/WebGSM/run.sh executable
-sudo chmod +x /var/www/WebGSM/run.sh
+sudo chmod +x /var/www/webgsm/run.sh
 
 # Adds user to no-login group
 sudo useradd -r -s /usr/sbin/nologin "$NEW_USER"
 
 # Change ownership of file to group lgms-webgui
-sudo chown -R "$NEW_USER:$NEW_USER" /var/www/WebGSM
+sudo chown -R "$NEW_USER:$NEW_USER" /var/www/webgsm
+
 
 # Create the systemd service unit file
-cat <<EOL > /etc/systemd/system/WebGSM.service
+cat <<EOL > /etc/systemd/system/webgsm.service
 [Unit]
 Description=LGMS-WebGUI start at boot.
 
@@ -68,15 +69,15 @@ EOL
 systemctl daemon-reload
 
 # Enable the service to start on boot
-systemctl enable WebGSM.service
+systemctl enable webgsm.service
 
 # Start the service
-systemctl start WebGSM.service
+systemctl start webgsm.service
 
 echo -e "${GREEN}Start at boot enabled. ${RESET}"
 
 # Set the directory where you want to search for .sh files
-directory="/var/www/WebGSM"
+directory="/var/www/webgsm"
 
 # Use the find command with sudo to locate all .sh files and make them executable
 # This allows execution of all .sh files for game installation and editing.
