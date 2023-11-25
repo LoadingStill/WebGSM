@@ -4,6 +4,8 @@
 
 # Installs the needed software
 sudo apt install python3-venv gcc python3-dev python3-pip unzip curl -y
+sudo dpkg --add-architecture i386 -y
+sudo apt update
 #pip install --no-binary :all: psutil
 
 # variables
