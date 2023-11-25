@@ -10,7 +10,7 @@ sudo apt install python3-venv gcc python3-dev python3-pip unzip -y
 NEW_USER=$SUDO_USER
 
 # Define ANSI color codes
-RED="\033[31m"
+# RED="\033[31m"
 GREEN="\033[32m"
 RESET="\033[0m"
 
@@ -30,7 +30,7 @@ unzip /var/www/WebGSM.zip -d /var/www/
 rm /var/www/WebGSM.zip
 
 # Tells user what has completed
-echo -e ${GREEN}"Download, unzip, and move completed."${RESET}
+echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
 
 # Create a virtual environment
 python3 -m venv /var/www/WebGSM/venv
@@ -48,10 +48,10 @@ deactivate
 sudo chmod +x /var/www/WebGSM/run.sh
 
 # Adds user to nologin group
-sudo useradd -r -s /usr/sbin/nologin $NEW_USER
+sudo useradd -r -s /usr/sbin/nologin "$NEW_USER"
 
 # Change ownership of file to group lgms-webgui
-sudo chown -R $NEW_USER:$NEW_USER /var/www/WebGSM
+sudo chown -R "$NEW_USER:$NEW_USER" /var/www/WebGSM
 
 # Create the systemd service unit file
 cat <<EOL > /etc/systemd/system/WebGSM.service
@@ -76,7 +76,7 @@ systemctl enable WebGSM.service
 # Start the service
 systemctl start WebGSM.service
 
-echo -e ${GREEN}"Start at boot enabled." ${RESET}
+echo -e "${GREEN}Start at boot enabled. ${RESET}"
 
 # Set the directory where you want to search for .sh files
 directory="/var/www/WebGSM"
