@@ -30,16 +30,16 @@ rm /var/www/webgsm.zip
 echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
 
 # Create a virtual environment
-python3 -m venv /var/www/webgsm/venv
+# python3 -m venv /var/www/webgsm/venv
 
 # Activate the virtual environment
-source /var/www/webgsm/venv/bin/activate
+# source /var/www/webgsm/venv/bin/activate
 
 # Install the psutil module
-pip install psutil
+# pip install psutil
 
 # Exit the virtual environment
-deactivate
+# deactivate
 
 # make /var/www/WebGSM/run.sh executable
 sudo chmod +x /var/www/webgsm/run.sh
