@@ -61,7 +61,7 @@ Description=LGMS-WebGUI start at boot.
 [Service]
 Type=simple
 User=$NEW_USER
-ExecStart=/var/www/WebGSM/run.sh
+ExecStart=/var/www/webgsm/run.sh
 
 [Install]
 WantedBy=multi-user.target
