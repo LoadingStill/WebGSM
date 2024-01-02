@@ -73,3 +73,7 @@ sudo find "$directory" -type f -name "*.sh" -exec sudo chmod +x {} \;
 # Sets files in webgsm directory to run sudo commands with out passwords
 echo '# Sets script to not need a password to install.  This is only for the webgsm files.' | sudo tee -a /etc/sudoers
 echo "$SUDO_USER ALL=(ALL) NOPASSWD: /bin/bash /var/www/webgsm/**/*.sh" | sudo tee -a /etc/sudoers
+
+# Print the
+ip_address=$(ip a | awk '/inet / && !/127.0.0.1/ {print $2}' | cut -d '/' -f 1)
+echo "Your game server is located at: http://$ip_address:8000"
