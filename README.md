@@ -9,6 +9,7 @@ I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discuss
 - Go to this files page [WebGSM-Installer.sh](https://git.howtoit.com/LoadingStill/WebGSM/raw/branch/main/WebGSM-Installer.sh) and click the download icon on the top right of the file.
   - In a terminal only enviroment use this command `wget -O WebGSM-Installer.sh https://git.howtoit.com/LoadingStill/WebGSM/raw/branch/main/WebGSM-Installer.sh`
 - Change the files permission to allow execution `sudo chmod +x ~/[file location]/WebGSM-Installer.sh`
+  - Changes the file to allow execution.
 - Run the file `sudo ~/[file location]/WebGSM-Installer.sh`
 - I am working on a more detailed guide for installing WebGSM on the repo wiki, [Installation](https://git.howtoit.com/LoadingStill/WebGSM/wiki/Installation).
 
