@@ -1,0 +1,30 @@
+name: Feature Request
+description: Propose a new feature
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to propose a new feature!                
+  - type: textarea
+    id: what-feature
+    attributes:
+      label: What feature would you like to see?
+      description: Also tell us, why this feature is important to you?
+      placeholder: Describe the feature you'd like to see!
+      value: "A new feature!"
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Please provide any additional information or context that might help us understand your feature better.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this proposal, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
