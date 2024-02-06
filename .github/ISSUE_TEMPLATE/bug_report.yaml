@@ -21,8 +21,8 @@ body:
       label: Version
       description: What version of our software are you running?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Main
+        - Dev
     validations:
       required: true
   - type: dropdown
@@ -31,10 +31,25 @@ body:
       label: What browsers are you seeing the problem on?
       multiple: true
       options:
+        - N/A
         - Firefox
         - Chrome
         - Safari
         - Microsoft Edge
+  - type: textarea
+    id: browser-logs
+    attributes:
+      labels: Relevant browser log output.
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: dropdown
+    id: server
+    attributes:
+      label: Was this error on the server side?
+      multiple: true
+      options:
+        - No
+        - Yes
   - type: textarea
     id: logs
     attributes:
