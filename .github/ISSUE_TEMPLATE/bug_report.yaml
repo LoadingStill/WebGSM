@@ -39,7 +39,7 @@ body:
   - type: textarea
     id: browser-logs
     attributes:
-      labels: Relevant browser log output.
+      label: Relevant browser log output.
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: dropdown
