@@ -45,7 +45,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://raw.githubusercontent.com/LoadingStill/WebGSM/main/.github/Code%20of%20Conduct.md)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
