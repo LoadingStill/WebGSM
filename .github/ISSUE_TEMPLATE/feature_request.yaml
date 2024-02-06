@@ -5,6 +5,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to propose a new feature!        
+    description: "Markdown text for the feature request."
   - type: textarea
     id: what-feature
     attributes:
@@ -14,11 +15,13 @@ body:
       value: "A new feature!"
     validations:
       required: true
+    description: "Text area for describing the requested feature."
   - type: textarea
     id: additional-info
     attributes:
       label: Additional Information
       description: Please provide any additional information or context that might help us understand your feature better.
+    description: "Text area for providing additional information."
   - type: checkboxes
     id: terms
     attributes:
@@ -27,3 +30,4 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
+    description: "Checkbox for agreeing to the Code of Conduct."
