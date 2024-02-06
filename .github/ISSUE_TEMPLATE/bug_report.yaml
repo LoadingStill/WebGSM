@@ -48,8 +48,8 @@ body:
       label: Was this error on the server side?
       multiple: true
       options:
-        - No
-        - Yes
+        - 'No'
+        - 'Yes'
   - type: textarea
     id: logs
     attributes:
