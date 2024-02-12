@@ -6,17 +6,17 @@ I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discuss
 
 ## Installation
 - Officially Debian 11 is supported.
-- Go to this files page [WebGSM-Installer.sh](https://github.com/LoadingStill/WebGSM/raw/branch/main/WebGSM-Installer.sh) and click the download icon on the top right of the file.
-  - In a terminal only enviroment use this command `wget -O WebGSM-Installer.sh https://github.com/LoadingStill/WebGSM/raw/branch/main/WebGSM-Installer.sh`
+- Go to this files page [WebGSM-Installer.sh](https://github.com/LoadingStill/WebGSM/blob/main/WebGSM-Installer.sh) and click the download icon on the top right of the file.
+  - In a terminal only enviroment use this command `wget -O WebGSM-Installer.sh https://github.com/LoadingStill/WebGSM/blob/main/WebGSM-Installer.sh`
 - Change the files permission to allow execution `sudo chmod +x ~/[file location]/WebGSM-Installer.sh`
   - Changes the file to allow execution.
-- Run the file `sudo ~/[file location]/WebGSM-Installer.sh`
+- Run the file `sudo ./WebGSM-Installer.sh`
 - I am working on a more detailed guide for installing WebGSM on the repo wiki, [Installation](https://github.com/LoadingStill/WebGSM/wiki/Installation).
 
 ## Uninstalling
 - Change the files permission to allow execution `sudo chmod +x /var/www/WebGSM/uninstall.sh`
 - Run the file `sudo /var/www/WebGSM/uninstall.sh`
-- **This will not unisntall the game servers you installed.  You will need to do that manually in the gui or the terminal.  Each game server is running as its own user, delete the user equals deleting the game server.  Please remember to close the ports of the games you remove.
+- **This will not unisntall the game servers you installed.  You will need to do that manually in the gui or the terminal.  Each game server is running as its own user, delete the user equals deleting the game server.  Please remember to close the ports of the games you remove.  I do want to have a better uninstaller in the future but this is the current solution as I learn how do make a uninstaller.
 
 ## Project Overview
 WebGSM is an easier way of managing game servers on Linux using the well-established LinuxGSM toolset. We recognize the importance of efficient server administration, and our goal is to make it accessible to both novices and experienced users alike.
