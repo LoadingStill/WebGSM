@@ -4,6 +4,9 @@
 # authentication
 auto/                             @LoadingStill
 
+# documentation
+wiki                              @LoadingStill
+
 # pages
 games/                            @LoadingStill
 static/                           @LoadingStill
