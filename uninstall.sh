@@ -17,4 +17,4 @@ sudo systemctl daemon-reload
 sudo rm -r /var/www/WebGSM
 
 # Removed the initial isntall script
-sudo rm /$SUDO_USER/Downloads/WebGSM-Installer.sh
+# sudo rm /$SUDO_USER/Downloads/WebGSM-Installer.sh
