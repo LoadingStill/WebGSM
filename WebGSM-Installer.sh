@@ -7,7 +7,7 @@ sudo apt update
 sudo dpkg --add-architecture i386
 sudo apt install python3-venv gcc python3-dev python3-pip unzip curl nala -y
 # LinuxGSM dependencies
-bc binutils bsdmainutils bzip2 ca-certificates cpio curl distro-info file gzip hostname jq lib32gcc-s1 lib32stdc++6 netcat-openbsd python3 tar tmux unzip util-linux uuid-runtime wget xz-utils
+sudo nala install bc binutils bsdmainutils bzip2 ca-certificates cpio curl distro-info file gzip hostname jq lib32gcc-s1 lib32stdc++6 netcat-openbsd python3 tar tmux unzip util-linux uuid-runtime wget xz-utils -y
 
 sudo nala update
 #pip install --no-binary :all: psutil
