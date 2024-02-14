@@ -10,46 +10,27 @@ import json
 app = Flask(__name__)
 
 
+
+# Configuration
+GAMES_DIR = 'games'
+
+def read_game_info(game_name):
+    file_path = os.path.join(GAMES_DIR, game_name, 'server_info.json')
+    with open(file_path) as json_file:
+        return json.load(json_file).get("Installed") is False
+
 @app.route('/')
 def home():
-    # Read the content of the JSON files for each game
-    with open('games/arma3/server_info.json') as arma3_json_file:
-        arma3_installed = json.load(arma3_json_file).get("Installed") is False
+    games = {
+        'arma3': read_game_info('arma3'),
+        'cs2': read_game_info('cs2'),
+        'factorio': read_game_info('factorio'),
+        'dst': read_game_info('dst'),
+        'eco': read_game_info('eco'),
+        'minecraftjava': read_game_info('minecraftjava')
+    }
+    return render_template('home.html', games=games)
 
-    with open('games/cs2/server_info.json') as cs2_json_file:
-        cs2_installed = json.load(cs2_json_file).get("Installed") is False
-
-    with open('games/factorio/server_info.json') as factorio_json_file:
-        factorio_installed = json.load(factorio_json_file).get("Installed") is False
-
-    with open('games/dst/server_info.json') as factorio_json_file:
-        dst_installed = json.load(factorio_json_file).get("Installed") is False
-
-    with open('games/eco/server_info.json') as factorio_json_file:
-        eco_installed = json.load(factorio_json_file).get("Installed") is False
-
-    with open('games/minecraftjava/server_info.json') as minecraftjava_json_file:
-        minecraftjava_installed = json.load(minecraftjava_json_file).get("Installed") is False
-
-    # Pass these variables to the 'home.html' template
-    return render_template('home.html', arma3_installed=arma3_installed, cs2_installed=cs2_installed,
-                           factorio_installed=factorio_installed, dst_installed=dst_installed,
-                           eco_installed=eco_installed, minecraftjava_installed=minecraftjava_installed)
-
-
-@app.route('/games/cs2')
-def cs2_page():
-    return render_template('games/cs2.html')
-
-
-@app.route('/games/factorio')
-def factorio_page():
-    return render_template('games/factorio.html')
-
-
-@app.route('/games/minecraftjava')
-def minecraftjava_page():
-    return render_template('games/minecraftjava.html', title='Minecraft Java Edition')
 
 
 @app.route('/install_minecraftjava', methods=['POST'])
@@ -60,21 +41,6 @@ def install_minecraftjava():
         return jsonify({'success': True, 'message': 'Installation successful'})
     except subprocess.CalledProcessError as e:
         return jsonify({'success': False, 'message': f'Error: {e}'})
-
-
-@app.route('/games/eco')
-def eco_page():
-    return render_template('games/eco.html')
-
-
-@app.route('/games/dst')
-def dst_page():
-    return render_template('games/dst.html')
-
-
-@app.route('/games/arma3')
-def arma3_page():
-    return render_template('games/arma3.html')
 
 
 def get_cpu_usage():
