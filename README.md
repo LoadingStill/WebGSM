@@ -6,8 +6,8 @@ I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discuss
 
 ## Installation
 - Officially Debian 11 is supported.
-- Go to this files page [WebGSM-Installer.sh](https://github.com/LoadingStill/WebGSM/blob/main/WebGSM-Installer.sh) and click the download icon on the top right of the file.
-  - In a terminal only enviroment use this command `wget -O WebGSM-Installer.sh https://github.com/LoadingStill/WebGSM/blob/main/WebGSM-Installer.sh`
+- Go to this files page [WebGSM-Installer.sh](https://github.com/LoadingStill/WebGSM/blob/latest/WebGSM-Installer.sh) and click the download icon on the top right of the file.
+  - In a terminal only enviroment use this command `wget -O WebGSM-Installer.sh https://github.com/LoadingStill/WebGSM/blob/latest/WebGSM-Installer.sh`
 - Change the files permission to allow execution `sudo chmod +x ~/[file location]/WebGSM-Installer.sh`
   - Changes the file to allow execution.
 - Run the file `sudo ./WebGSM-Installer.sh`
@@ -23,10 +23,10 @@ WebGSM is an easier way of managing game servers on Linux using the well-establi
 
 ## Current Progress
 ### November 8, 2023
-![Home Page](https://github.com/LoadingStill/WebGSM/raw/branch/main/.gitea/ProjectUpdate/Nov-8-2023-Status-Home-Page-Update.png)  
+![Home Page](https://github.com/LoadingStill/WebGSM/raw/branch/latest/.gitea/ProjectUpdate/Nov-8-2023-Status-Home-Page-Update.png)  
 When a game is greyed out it means the game is not installed, I have the code that checks if the json Install = True or Flase.  I am going to have the install script change that file to True. When the homepage is loaded right now every game is checked for installed status.  
-![Game Page](https://github.com/LoadingStill/WebGSM/raw/branch/main/.gitea/ProjectUpdate/Nov-8-2023-Game-Page-Update.png) 
-Currently the layout is as seen in the image, I plan to have a terminal in the right middle of the screen that will loginto the user that the game server is under.  All game servers will be under a different user to make it easier to maintain servers.
+![Game Page](https://github.com/LoadingStill/WebGSM/raw/branch/latest/.gitea/ProjectUpdate/Nov-8-2023-Game-Page-Update.png) 
+Currently the layout is as seen in the image, I plan to have a terminal in the right middle of the screen that will loginto the user that the game server is under.  All game servers will be under a different user to make it easier to latesttain servers.
 
 
 ## Key Features
