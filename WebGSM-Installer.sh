@@ -25,7 +25,7 @@ RESET="\033[0m"
 sudo mkdir /var/www
 
 # Download file and unzip into /var/www folder
-wget https://git.howtoit.com/LoadingStill/WebGSM/archive/latest.zip -O /tmp/latest.zip && sudo unzip /tmp/latest.zip -d /var/www/
+wget https://github.com/LoadingStill/WebGSM/archive/refs/heads/latest.zip -O /tmp/latest.zip && sudo unzip /tmp/latest.zip -d /var/www/
 
 
 # Tells user what has completed
