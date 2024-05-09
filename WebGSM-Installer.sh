@@ -26,7 +26,7 @@ sudo mkdir /var/www
 
 # Download file and unzip into /var/www folder
 wget https://github.com/LoadingStill/WebGSM/archive/refs/heads/latest.zip -O /tmp/latest.zip && sudo unzip /tmp/latest.zip -d /var/www/
-
+ 
 
 # Tells user what has completed
 echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
