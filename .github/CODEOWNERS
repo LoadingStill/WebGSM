@@ -1,0 +1,19 @@
+# github
+.github/                          @LoadingStill
+
+# authentication
+auto/                             @LoadingStill
+
+# documentation
+wiki                              @LoadingStill
+
+# pages
+games/                            @LoadingStill
+static/                           @LoadingStill
+templates/                        @LoadingStill
+
+# installer
+WebGSM/WebGSM-Installer.sh        @LoadingStill
+
+# uninstaller
+WebGSM/uninstall.sh               @LoadingStill

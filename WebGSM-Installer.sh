@@ -4,8 +4,12 @@
 
 # Installs the needed software
 sudo apt update
-sudo apt install python3-venv gcc python3-dev python3-pip unzip curl nala -y
 sudo dpkg --add-architecture i386
+sudo apt install nala -y
+sudo nala install python3-venv gcc python3-dev python3-pip unzip curl -y
+# LinuxGSM dependencies
+sudo nala install bc binutils bsdmainutils bzip2 ca-certificates cpio curl distro-info file gzip hostname jq lib32gcc-s1 lib32stdc++6 netcat-openbsd python3 tar tmux unzip util-linux uuid-runtime wget xz-utils -y
+
 sudo nala update
 #pip install --no-binary :all: psutil
 
@@ -21,8 +25,8 @@ RESET="\033[0m"
 sudo mkdir /var/www
 
 # Download file and unzip into /var/www folder
-wget https://git.howtoit.com/LoadingStill/WebGSM/archive/main.zip -O /tmp/main.zip && sudo unzip /tmp/main.zip -d /var/www/
-
+wget https://github.com/LoadingStill/WebGSM/archive/refs/heads/latest.zip -O /tmp/latest.zip && sudo unzip /tmp/latest.zip -d /var/www/
+ 
 
 # Tells user what has completed
 echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
