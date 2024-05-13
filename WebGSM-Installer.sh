@@ -24,9 +24,11 @@ RESET="\033[0m"
 # Make the folder where this will be stored
 sudo mkdir /var/www
 
-# Download file and unzip into /var/www folder
-wget -O webgsm https://github.com/LoadingStill/WebGSM/archive/refs/heads/latest.zip -O /tmp/latest.zip && sudo unzip /tmp/latest.zip -d /var/www/
- 
+# Download the latest version of the WebGSM repository from GitHub as a zip file and save it to /tmp/latest.zip
+# Unzip the downloaded file into /tmp/
+# Move the extracted files to /var/www/webgsm
+wget https://github.com/LoadingStill/WebGSM/archive/refs/heads/latest.zip -O /tmp/latest.zip && unzip /tmp/latest.zip -d /tmp/ && mv /tmp/WebGSM-* /var/www/webgsm
+
 
 # Tells user what has completed
 echo -e "${GREEN}Download, unzip, and move completed.${RESET}"
