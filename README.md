@@ -7,8 +7,14 @@ I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discuss
 ## Installation
 - Officially Debian 11 is supported.
 - Go to this files page [WebGSM-Installer.sh](https://github.com/LoadingStill/WebGSM/blob/latest/WebGSM-Installer.sh) and click the download icon on the top right of the file.
-  - In a terminal only enviroment use this command `wget -O WebGSM-Installer.sh https://raw.githubusercontent.com/LoadingStill/WebGSM/latest/WebGSM-Installer.sh`
-- Change the files permission to allow execution `sudo chmod +x WebGSM-Installer.sh`
+  - In a terminal only enviroment use this command
+```
+wget -O WebGSM-Installer.sh https://raw.githubusercontent.com/LoadingStill/WebGSM/latest/WebGSM-Installer.sh
+```
+- Change the files permission to allow execution
+```
+sudo chmod +x WebGSM-Installer.sh
+```
   - Changes the file to allow execution.
 - Run the file `sudo ./WebGSM-Installer.sh`
 - I am working on a more detailed guide for installing WebGSM on the repo wiki, [Installation](https://github.com/LoadingStill/WebGSM/wiki/Installation).
