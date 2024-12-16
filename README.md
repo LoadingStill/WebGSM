@@ -4,18 +4,35 @@ Welcome to WebGSM, is a user-friendly web based graphical interface for LinuxGSM
 **DISCLAIMER** - WebSGM and LinuxGSM are not the same project, and in no way is WebGSM an offical or offically supported by LinuxGSM.  This is just my personal project.  
 I am waiting on a [reply](https://github.com/GameServerManagers/LinuxGSM/discussions/4371) about use of LinuxGSM name in my project.
 
+# THIS IS A VERY EARLY ALPHA BUILD
+
 ## Installation
 - Officially Debian 11 is supported.
 - Go to this files page [WebGSM-Installer.sh](https://github.com/LoadingStill/WebGSM/blob/latest/WebGSM-Installer.sh) and click the download icon on the top right of the file.
-  - In a terminal only enviroment use this command `wget -O WebGSM-Installer.sh https://raw.githubusercontent.com/LoadingStill/WebGSM/latest/WebGSM-Installer.sh`
-- Change the files permission to allow execution `sudo chmod +x WebGSM-Installer.sh`
+  - In a terminal only enviroment use this command
+```
+wget -O WebGSM-Installer.sh https://raw.githubusercontent.com/LoadingStill/WebGSM/latest/WebGSM-Installer.sh
+```
+- Change the files permission to allow execution
+```
+sudo chmod +x WebGSM-Installer.sh
+```
   - Changes the file to allow execution.
-- Run the file `sudo ./WebGSM-Installer.sh`
+- Run the file
+```
+sudo ./WebGSM-Installer.sh
+```
 - I am working on a more detailed guide for installing WebGSM on the repo wiki, [Installation](https://github.com/LoadingStill/WebGSM/wiki/Installation).
 
 ## Uninstalling
-- Change the files permission to allow execution `sudo chmod +x /var/www/WebGSM/uninstall.sh`
-- Run the file `sudo /var/www/WebGSM/uninstall.sh`
+- Change the files permission to allow execution
+```
+sudo chmod +x /var/www/WebGSM/uninstall.sh
+```
+- Run the file
+```
+sudo /var/www/WebGSM/uninstall.sh
+```
 - **This will not unisntall the game servers you installed.  You will need to do that manually in the gui or the terminal.  Each game server is running as its own user, delete the user equals deleting the game server.  Please remember to close the ports of the games you remove.  I do want to have a better uninstaller in the future but this is the current solution as I learn how do make a uninstaller.
 
 ## Project Overview
