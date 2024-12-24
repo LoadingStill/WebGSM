@@ -3,9 +3,9 @@
 # downloading files into that folder and creation of the .service file for running this program at boot
 
 # Installs the needed software
-apt update
+apt-get update
 dpkg --add-architecture i386
-apt install nala -y
+apt-get install nala -y
 nala install python3-venv gcc python3-dev python3-pip unzip curl -y
 # LinuxGSM dependencies
 sudo nala install bc binutils bsdmainutils bzip2 ca-certificates cpio curl distro-info file gzip hostname jq lib32gcc-s1 lib32stdc++6 netcat-openbsd python3 tar tmux unzip util-linux uuid-runtime wget xz-utils -y
