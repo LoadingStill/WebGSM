@@ -83,3 +83,4 @@ echo "$SUDO_USER ALL=(ALL) NOPASSWD: /bin/bash /var/www/webgsm/**/*.sh" | sudo t
 # Print the
 ip_address=$(ip a | awk '/inet / && !/127.0.0.1/ {print $2}' | cut -d '/' -f 1)
 echo "Your game server is located at: http://$ip_address:8000"
+echo "Your game server is located at: http://host.docker.internal:8000"
