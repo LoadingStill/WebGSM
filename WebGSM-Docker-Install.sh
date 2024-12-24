@@ -6,7 +6,7 @@
 apt-get update
 dpkg --add-architecture i386
 # Installs WebGSM dependencies
-apt-get install python3-venv gcc python3-dev python3-pip unzip curl -y
+apt-get install python3-venv gcc python3-dev python3-pip unzip curl systemd -y
 # LinuxGSM dependencies
 apt-get install bc binutils bsdmainutils bzip2 ca-certificates cpio curl distro-info file gzip hostname jq lib32gcc-s1 lib32stdc++6 netcat-openbsd python3 tar tmux unzip util-linux uuid-runtime wget xz-utils -y
 
