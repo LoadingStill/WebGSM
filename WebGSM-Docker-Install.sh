@@ -5,12 +5,12 @@
 # Installs the needed software
 apt-get update
 dpkg --add-architecture i386
-apt-get install nala -y
-nala install python3-venv gcc python3-dev python3-pip unzip curl -y
+# Installs WebGSM dependencies
+apt-get install python3-venv gcc python3-dev python3-pip unzip curl -y
 # LinuxGSM dependencies
-sudo nala install bc binutils bsdmainutils bzip2 ca-certificates cpio curl distro-info file gzip hostname jq lib32gcc-s1 lib32stdc++6 netcat-openbsd python3 tar tmux unzip util-linux uuid-runtime wget xz-utils -y
+apt-get install bc binutils bsdmainutils bzip2 ca-certificates cpio curl distro-info file gzip hostname jq lib32gcc-s1 lib32stdc++6 netcat-openbsd python3 tar tmux unzip util-linux uuid-runtime wget xz-utils -y
 
-nala update
+apt-get update -y
 #pip install --no-binary :all: psutil
 
 # variables
