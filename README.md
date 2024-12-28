@@ -1,3 +1,12 @@
+# Update 28 Dec 2024
+I am still working on this project, but I am changing it A LOT.
+I am working on learning docker and running this in docker containers instead of just nationally.
+I was struggling a lot in making an API that would work properly from my lack of what I know and feature creep.
+
+
+
+
+
 # About WebGSM
 
 Welcome to WebGSM, is a user-friendly web based graphical interface for LinuxGSM (Linux Game Server Managers).  
