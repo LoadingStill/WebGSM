@@ -29,4 +29,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/webgsm:latest
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/webgsm:latest
+            ghcr.io/${{ github.repository_owner }}/webgsm:${{ github.run_number }}
+
