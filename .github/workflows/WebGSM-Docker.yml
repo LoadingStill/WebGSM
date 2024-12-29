@@ -33,4 +33,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ env.REPOSITORY_OWNER }}/webgsm:latest
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/webgsm:${{ github.ref_name }}
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/webgsm:${{ github_ref_name }}
