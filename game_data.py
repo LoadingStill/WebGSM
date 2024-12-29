@@ -1,5 +1,5 @@
 game_pages = {
-    'cs2': 'https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg',
-    'factorio': 'https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg?t=1597145422'
+    'cs2': '/static/images/cs2.jpg',
+    'factorio': '/static/images/fctr.jpg'
     # Add more games here as needed
 }
