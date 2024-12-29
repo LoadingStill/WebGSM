@@ -16,7 +16,9 @@
     </div>
     <div class="grid-container">
         <div class="content">
-            <button class="game-button" onclick="window.location.href='/games/cs2.html';">Play CS2</button>
+            <a id="cs2-button" href="{{ url_for('cs2') }}">
+                <img class="game-button" src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg?t=1695852468" alt="CS2 Poster">
+            </a>
         </div>
     </div>
 </body>

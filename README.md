@@ -26,3 +26,8 @@ All the other files are the older versions. They will be put in the /app folder 
 Look into importing docker-compose file from:
 https://github.com/GameServerManagers/docker-gameserver/tree/main/docker-compose
 If the work is already done, build on top of it, no need to remake the wheel.
+
+
+For dev use:
+1. `python3 -m venv venv`
+2. `pip freeze > requirements.txt`
