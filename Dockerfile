@@ -1,20 +1,16 @@
 # Base image
-FROM python:3.9-slim
+FROM python:3.9.21-bookworm
 
-# Install dependencies
+# Set working directory
 WORKDIR /app
+
+# Copy requirements and install dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Copy app
-COPY * .
+# Copy application code
+COPY . .
 
-# Expose Flask port
-EXPOSE 8082
-
-
-# Set the environment variable for Flask
-ENV FLASK_APP=app.py
-
-# Run the Flask server
-CMD ["flask", "run", "--host=0.0.0.0", "--port=8082"]
+# Expose port and run Flask
+EXPOSE 5000
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]

@@ -8,8 +8,8 @@ THIS IS AN ALPHA SOFTWARE!
 
 
 1. Build the container: `docker build -t webgsm .`
-2. Run the Container: `docker run -d -p 8082:8082 -v /var/run/docker.sock:/var/run/docker.sock webgsm`
-3. Access the Web App: Open a browser and go to `http://localhost:8082/frontend/index.html`
+2. Run the Container: `docker run -d -p 5000:5000 -v /var/run/docker.sock:/var/run/docker.sock webgsm`
+3. Access the Web App: Open a browser and go to `http://localhost:5000/frontend/index.html`
 
 Notes:
 The `-v /var/run/docker.sock:/var/run/docker.sock` part allows the container to manage Docker on the host. This is powerful but risky—use with care.
