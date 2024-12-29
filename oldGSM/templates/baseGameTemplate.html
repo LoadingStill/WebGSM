@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='game.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        {% block sidebar %}{% endblock %}
+    </div>
+    <div class="container">
+        <div class="header">
+            {% block title_block %}{% endblock %}
+        </div>
+        <div class="content">
+            {% block body %}{% endblock %}
+        </div>
+        <div class="footer">
+            {% block footer %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

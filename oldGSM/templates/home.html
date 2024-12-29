@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Style for the image buttons */
+        .game-button {
+            width: 200px; /* One-third of the original width (600px / 3) */
+            height: 300px; /* One-third of the original height (900px / 3) */
+        </style>
+        <script>
+            function updateCPUUsage() {
+                $.get('/get_cpu_usage', function(data) {
+                    $('#cpu-usage').text(data.cpu_usage.toFixed(2) + '%');
+                });
+            }
+            setInterval(updateCPUUsage, 1000); // Update every 5 seconds
+        </script>
+        <script>
+            function updateRAMUsage() {
+                $.get('/get_ram_usage', function(data) {
+                    $('#ram-usage').text(data.ram_usage.toFixed(2) + '%');
+                });
+            }
+            setInterval(updateRAMUsage, 1000); // Update every 5 seconds
+        </script>
+        <script>
+            function updateDISKUsage() {
+                $.get('/get_disk_usage', function(data) {
+                    $('#disk-usage').text(data.disk_usage.toFixed(2) + '%');
+                });
+            }
+            setInterval(updateDISKUsage, 1000); // Update every 5 seconds
+        </script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <h1>WebGSM</h1>
+            <br>
+            <br>
+            <br>
+            <p>CPU Usage: <span id="cpu-usage">Loading...</span></p>
+            <p>RAM Usage: <span id="ram-usage">Loading...</span></p>
+            <p>Disk Usage: <span id="disk-usage">Loading...</span></p>
+            <p>Network Usage: <span id="network-usage">Loading...</span></p>
+        </div>
+        <div class="grid-container">
+            <div class="content">
+                <a id="arma3-button" href="{{ url_for('arma3_page') }}">
+                    <img class="game-button {% if arma3_installed %}grayscale{% endif %}" src="https://cdn.cloudflare.steamstatic.com/steam/apps/107410/library_600x900.jpg?t=1568818863" alt="Arma 3 Poster">
+                </a>
+                <a id="cs2-button" href="{{ url_for('cs2_page') }}">
+                    <img class="game-button {% if cs2_installed %}grayscale{% endif %}" src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg?t=1695852468" alt="CS2 Poster">
+                </a>
+                <a id="factorio-button" href="{{ url_for('factorio_page') }}">
+                    <img class="game-button {% if factorio_installed %}grayscale{% endif %}" src="https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg?t=1597145422" alt="Factorio Poster">
+                </a>
+                <a id="dst-button" href="{{ url_for('dst_page') }}">
+                    <img class="game-button {% if dst_installed %}grayscale{% endif %}" src="https://cdn.cloudflare.steamstatic.com/steam/apps/322330/library_600x900.jpg?t=1656100830" alt="Don't Starve Together Poster">
+                </a>
+                <a id="eco-button" href="{{ url_for('eco_page') }}">
+                    <img class="game-button {% if eco_installed %}grayscale{% endif %}" src="https://cdn.cloudflare.steamstatic.com/steam/apps/382310/library_600x900.jpg?t=1562708011" alt="Eco Poster">
+                </a>
+                <a id="minecraftjava-button" href="{{ url_for('minecraftjava_page') }}">
+                    <img class="game-button {% if minecraftjava_installed %}grayscale{% endif %}" src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" alt="Minecraft Java Poster">
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

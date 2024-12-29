@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: rgb(169, 169, 169);
+    margin-left: 0%;
+}
+
+.sidebar {
+    width: 12%;
+    max-width: 413px;
+    height: 100vh;
+    background-color: rgb(112, 128, 144);
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 200px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    margin-bottom: 10px; /* Add margin below the image */
+}
+
+/* Style the sidebar buttons */
+.sidebar-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 0px 0;
+    background-color: #555;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-buttons button:hover {
+    background-color: #777;
+}
+
+.sidebar-buttons button:focus {
+    outline: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 85%; /* Adjust the width for the content area */
+    margin-left: 0%; /* Ensure the content area doesn't overlap with the sidebar */
+}
+
+.header {
+    padding: 20px;
+    margin-left: 20%;
+}
+
+.content {
+    padding: 15px;
+    margin-left: 20%;
+}
+
+.footer {
+    padding: 20px;
+    margin-left: 20%;
+}

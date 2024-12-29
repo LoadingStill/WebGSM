@@ -1,0 +1,40 @@
+{% extends "baseGameTemplate.html" %}
+
+{% block title %}Factorio{% endblock %}
+
+{% block title_block %}
+    <h1>Factorio</h1>
+{% endblock %}
+
+{% block sidebar %}
+    <div class="sidebar-images">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg?t=1597145422" alt="Factorio Poster">
+    </div>
+
+    <div class="sidebar-buttons">
+        <a href="https://www.factorio.com/" target="_blank"><button title="https://www.factorio.com/">Official Website</button></a><br>
+        <a href="https://store.steampowered.com/app/427520/Factorio/" target="_blank"><button title="https://store.steampowered.com/app/427520/Factorio/">Steam Page</button></a><br>
+        <button class="installButton" title="Start Game Server">Install</button><br>
+        <button class="startButton" title="Start Factorio Server">Start</button><br>
+        <button class="stopButton" title="Stop Factorio Server">Stop</button><br>
+        <button class="restartButton" title="Restart Factorio Server">Restart</button><br>
+        <button class="consoleButton" title="Console Factorio Server">Console</button><br>
+        <button class="updateButton" title="Update Factorio Server">Update</button><br>
+        <button class="force-updateButton" title="force-update Factorio Server">Force-Update</button><br>
+        <button class="validateButton" title="Validate Factorio Server">Validate</button><br>
+        <button class="detailsButton" title="Details Factorio Server">Details</button><br>
+        <button class="debugButton" title="Debug Factorio Server">Debug</button><br>
+        <button class="backupButton" title="Backup Factorio Server">Backup</button><br>
+        <button class="monitorButton" title="Monitor Factorio Server">Monitor</button><br>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <p>Body</p>
+    <!-- Rest of the page content -->
+{% endblock %}
+
+{% block footer %}
+    <p>Footer</p>
+    <!-- Footer content -->
+{% endblock %}
