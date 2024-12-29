@@ -7,6 +7,8 @@ app = Flask(__name__)
 def home():
     return render_template('home.html', game_pages=game_pages)
 
+# Game list is generated at game_data.py
+# To add a new game make the html page and needed scripts first then add game at game_data.py last before publishing.
 @app.route('/games/<game_name>.html')
 def game(game_name):
     if game_name in game_pages:
