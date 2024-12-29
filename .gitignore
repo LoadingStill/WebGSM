@@ -132,6 +132,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Unignore the specific .env file in root
+!/.env
+
 # Spyder project settings
 .spyderproject
 .spyproject
