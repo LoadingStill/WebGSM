@@ -1,12 +1,10 @@
 version: '3.8'  # Specifies the version of the Docker Compose file format
 
 services:
-  webgsm-app:  # Defines the service named "flask-app"
+  web-app:  # Defines the service named "flask-app"
     build:
       context: .  # Build the image using the Dockerfile in the current directory
       dockerfile: Dockerfile  # Specifies the name of the Dockerfile (optional if named 'Dockerfile')
-    volumes:
-      - ${USER_IMAGES_PATH}:/app/static/images  # Mount a local directory (defined by the environment variable) to the container's /app/static/images directory for persistent image storage
     ports:
       - "5000:5000"  # Map container port 5000 to local port 5000, allowing access to the Flask app from the browser at localhost:5000
     restart: always  # Ensure the container always restarts if it stops or crashes
