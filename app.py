@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from game_data import game_pages  # Import the game_pages dictionary
+import os
+import subprocess
 
 app = Flask(__name__)
 
