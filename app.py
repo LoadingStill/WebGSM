@@ -1,9 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
+from game_data import game_pages  # Import the game_pages dictionary
 
 app = Flask(__name__)
-
-# List of game names (without the .html extension)
-game_pages = ['cs2', 'arma3', 'dst', 'factorio', 'eco', 'minecraftJava']
 
 @app.route('/')
 def home():

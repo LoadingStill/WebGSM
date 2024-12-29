@@ -16,9 +16,12 @@
     </div>
     <div class="grid-container">
         <div class="content">
-            <a id="cs2-button" href="{{ url_for('cs2') }}">
-                <img class="game-button" src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg?t=1695852468" alt="CS2 Poster">
-            </a>
+            <!-- Loop through game pages and create buttons with their respective images -->
+            {% for game, image_url in game_pages.items() %}
+                <a href="{{ url_for('game', game_name=game) }}">
+                    <img class="game-button" src="{{ image_url }}" alt="{{ game }} Poster">
+                </a>
+            {% endfor %}
         </div>
     </div>
 </body>
