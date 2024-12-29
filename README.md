@@ -38,5 +38,5 @@ For dev use:
 
 ### Docker compose info
 1. set variables in `.env`
-2. run `docker-compose.yml up` or `docker-compose.yml up -d` for background run
+2. run `docker-compose up` or `docker-compose up -d` for background run
 3. `docker ps --format "{{.ID}}: {{.Image}} - {{.Ports}}"` to see docker contaienr info, docker-compose does not show this info in docker desktop when ran from docker compoase for some reason...

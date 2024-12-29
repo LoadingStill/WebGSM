@@ -8,3 +8,9 @@ services:
     ports:
       - "5000:5000"  # Map container port 5000 to local port 5000, allowing access to the Flask app from the browser at localhost:5000
     restart: always  # Ensure the container always restarts if it stops or crashes
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        labels: "debug"
