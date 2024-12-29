@@ -2,8 +2,8 @@ name: WebGSM-Docker # Build and Publish
 
 on:
   push:
-    branches:
-      - main # Runs on pushes to the 'main' branch
+    tags:
+      - 'v*.*.*'
   pull_request: # Optional: Run for pull requests to test
 
 jobs:
