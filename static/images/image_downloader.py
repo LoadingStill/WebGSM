@@ -2,38 +2,27 @@ import os
 import json
 import requests
 
-# Path to the JSON file containing the game data
-json_file = 'image_urls.json'
+# Get the absolute path to the current directory (static/images)
+current_dir = os.path.dirname(__file__)
+json_file = os.path.join(current_dir, 'image_urls.json')  # This ensures the correct path
 
-# Folder where images will be saved
-save_folder = './static/images'
-
-# Ensure the save folder exists
-if not os.path.exists(save_folder):
-    os.makedirs(save_folder)
-
-# Function to download and save the image
-def download_image(image_url, save_path):
+# Check if the file exists
+if not os.path.exists(json_file):
+    print(f"File not found: {json_file}")
+else:
+    # Open and read the JSON file
     try:
-        # Send a GET request to the image URL
-        response = requests.get(image_url)
-        # Check if the request was successful
-        if response.status_code == 200:
-            # Open the file in write-binary mode and save the content
-            with open(save_path, 'wb') as file:
-                file.write(response.content)
-            print(f"Downloaded image and saved as {save_path}")
-        else:
-            print(f"Failed to download {image_url}, status code: {response.status_code}")
-    except Exception as e:
-        print(f"Error downloading {image_url}: {e}")
-
-# Load the JSON file containing the image URLs
-with open(json_file, 'r') as file:
-    game_data = json.load(file)
-
-# Iterate over each entry in the JSON data
-for game in game_data:
-    game_name, rename_to, image_url = game
-    save_path = os.path.join(save_folder, rename_to)
-    download_image(image_url, save_path)
+        with open(json_file, 'r') as file:
+            data = json.load(file)
+            print("Data loaded successfully")
+            # Add your code to download the images
+            for game, filename, url in data:
+                # Download the image
+                response = requests.get(url)
+                with open(os.path.join(current_dir, filename), 'wb') as img_file:
+                    img_file.write(response.content)
+                    print(f"Downloaded image and saved as {filename}")
+    except FileNotFoundError:
+        print(f"File not found: {json_file}")
+    except json.JSONDecodeError:
+        print("Error decoding JSON")

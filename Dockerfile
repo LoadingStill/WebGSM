@@ -11,6 +11,10 @@ RUN pip install -r requirements.txt
 # Copy application code
 COPY . .
 
+# Make sure .env will work
+RUN pip install python-dotenv
+
+
 # Expose port and run Flask
 EXPOSE 5000
 CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]

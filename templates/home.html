@@ -23,6 +23,21 @@
                 </a>
             {% endfor %}
         </div>
+        <!-- Add a button to start the image download process -->
+        <button id="download-button">Download Images</button>
+        <p id="download-status"></p>
     </div>
+
+    <script>
+        // When the download button is clicked
+        $('#download-button').click(function() {
+            // Send an AJAX request to start the download process
+            $.get('/start-download', function(data) {
+                $('#download-status').text(data.message);
+            }).fail(function(error) {
+                $('#download-status').text("Error starting the download.");
+            });
+        });
+    </script>
 </body>
 </html>

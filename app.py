@@ -1,16 +1,29 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for
-from game_data import game_pages  # Import the game_pages dictionary
 import os
 import subprocess
+from game_data import game_pages
 
 app = Flask(__name__)
+
+# Absolute path to the image_downloader.py script in the Docker container
+image_downloader_path = os.path.join(os.path.dirname(__file__), 'static', 'images', 'image_downloader.py')
 
 @app.route('/')
 def home():
     return render_template('home.html', game_pages=game_pages)
 
-# Game list is generated at game_data.py
-# To add a new game make the html page and needed scripts first then add game at game_data.py last before publishing.
+@app.route('/start-download')
+def start_download():
+    try:
+        # Ensure that the script exists before running
+        if os.path.exists(image_downloader_path):
+            subprocess.run(['python', image_downloader_path], check=True)
+            return jsonify({"message": "Download started!"}), 200
+        else:
+            return jsonify({"message": "Image downloader script not found!"}), 404
+    except subprocess.CalledProcessError as e:
+        return jsonify({"message": f"Error: {e}"}), 500
+
 @app.route('/games/<game_name>.html')
 def game(game_name):
     if game_name in game_pages:
