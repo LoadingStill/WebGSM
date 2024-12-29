@@ -9,7 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/oldGSM/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (WebGSM)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (Docker-Testing)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@types/jquery" level="application" />
     <orderEntry type="library" name="jquery-3.6.4.min.js" level="project" />

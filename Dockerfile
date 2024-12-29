@@ -16,5 +16,5 @@ RUN pip install python-dotenv
 
 
 # Expose port and run Flask
-EXPOSE 5000
-CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
+EXPOSE 5050
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=5050"]

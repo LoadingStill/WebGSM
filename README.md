@@ -10,7 +10,7 @@ I was struggling a lot in making an API that would work properly from my lack of
 ## Build Info
 
 1. Build the container: `docker build -t webgsm .`
-2. Run the Container: `docker run -d -p 5000:5000 -v /var/run/docker.sock:/var/run/docker.sock webgsm`
+2. Run the Container: `docker run -d -p 5050:5050 -v /var/run/docker.sock:/var/run/docker.sock webgsm`
 3. Access the Web App: Open a browser and go to `http://localhost:5000/frontend/index.html`
 
 Notes:
