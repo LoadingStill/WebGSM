@@ -13,7 +13,7 @@ COPY . .
 
 # Make sure .env will work
 RUN pip install python-dotenv
-
+RUN apt-get update && apt-get install -y docker.io
 
 # Expose port and run Flask
 EXPOSE 5050
