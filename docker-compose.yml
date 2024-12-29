@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build:
+      context: .  # Build the image using the Dockerfile in the current directory
+    volumes:
+      - ${USER_IMAGES_PATH}:/app/static/images  # Use an environment variable for the local images path
+    ports:
+      - "5000:5000"  # Map container port to local port
+    restart: always
