@@ -21,3 +21,8 @@ Dockerfile
 are the new files and folder  
 
 All the other files are the older versions. They will be put in the /app folder eventually
+
+
+Look into importing docker-compose file from:
+https://github.com/GameServerManagers/docker-gameserver/tree/main/docker-compose
+If the work is already done, build on top of it, no need to remake the wheel.

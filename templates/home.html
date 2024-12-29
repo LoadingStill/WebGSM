@@ -5,28 +5,19 @@
     <title>Home Page</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        /* Style for the image buttons */
-        .game-button {
-            width: 200px; /* One-third of the original width (600px / 3) */
-            height: 300px; /* One-third of the original height (900px / 3) */
-    </style>
-    </head>
-    <body>
-        <div class="sidebar">
-            <h1>WebGSM</h1>
-            <br>
-            <br>
-            <br>
-            <p>CPU Usage: <span id="cpu-usage">Loading...</span></p>
-            <p>RAM Usage: <span id="ram-usage">Loading...</span></p>
-            <p>Disk Usage: <span id="disk-usage">Loading...</span></p>
-            <p>Network Usage: <span id="network-usage">Loading...</span></p>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>WebGSM</h1>
+        <p>CPU Usage: <span id="cpu-usage">Loading...</span></p>
+        <p>RAM Usage: <span id="ram-usage">Loading...</span></p>
+        <p>Disk Usage: <span id="disk-usage">Loading...</span></p>
+        <p>Network Usage: <span id="network-usage">Loading...</span></p>
+    </div>
+    <div class="grid-container">
+        <div class="content">
+            <button class="game-button" onclick="window.location.href='/games/cs2.html';">Play CS2</button>
         </div>
-        <div class="grid-container">
-            <div class="content">
-
-            </div>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
