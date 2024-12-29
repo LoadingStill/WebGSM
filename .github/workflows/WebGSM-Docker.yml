@@ -3,8 +3,7 @@ name: WebGSM-Docker # Build and Publish
 on:
   push:
     tags:
-      - 'v*.*.*'
-  pull_request: # Optional: Run for pull requests to test
+      - 'v*.*.*'  # This will trigger the action on tag pushes like v1.0.0
 
 jobs:
   build-and-push:
@@ -34,4 +33,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ env.REPOSITORY_OWNER }}/webgsm:latest
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/webgsm:${{ github.run_number }}
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/webgsm:${{ github.ref_name }}  # Using the tag name that triggered the action
