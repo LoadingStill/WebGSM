@@ -4,8 +4,10 @@ I am working on learning docker and running this in docker containers instead of
 I was struggling a lot in making an API that would work properly from my lack of what I know and feature creep.
 
 
-THIS IS AN ALPHA SOFTWARE!
+# THIS IS AN ALPHA SOFTWARE!
 
+
+## Build Info
 
 1. Build the container: `docker build -t webgsm .`
 2. Run the Container: `docker run -d -p 5000:5000 -v /var/run/docker.sock:/var/run/docker.sock webgsm`
@@ -14,6 +16,8 @@ THIS IS AN ALPHA SOFTWARE!
 Notes:
 The `-v /var/run/docker.sock:/var/run/docker.sock` part allows the container to manage Docker on the host. This is powerful but risky—use with care.
 
+
+##  Dev Info
 
 
 Dockerfile  
@@ -31,3 +35,8 @@ If the work is already done, build on top of it, no need to remake the wheel.
 For dev use:
 1. `python3 -m venv venv`
 2. `pip freeze > requirements.txt`
+
+### Docker compose info
+1. set variables in `.env`
+2. run `docker-compose.yml up` or `docker-compose.yml up -d` for background run
+3. `docker ps --format "{{.ID}}: {{.Image}} - {{.Ports}}"` to see docker contaienr info, docker-compose does not show this info in docker desktop when ran from docker compoase for some reason...
