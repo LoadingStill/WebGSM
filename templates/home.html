@@ -28,16 +28,22 @@
         <p id="download-status"></p>
     </div>
 
-    <script>
-        // When the download button is clicked
-        $('#download-button').click(function() {
-            // Send an AJAX request to start the download process
-            $.get('/start-download', function(data) {
-                $('#download-status').text(data.message);
-            }).fail(function(error) {
-                $('#download-status').text("Error starting the download.");
+        <script>
+            // When the download button is clicked
+            $('#download-button').click(function() {
+                // Send an AJAX request to start the download process
+                $.get('/start-download', function(data) {
+                    $('#download-status').text(data.message);
+
+                    // Add a 3-second delay before refreshing the page
+                    setTimeout(function() {
+                        location.reload();  // Refresh the page
+                    }, 3000);  // 3000 milliseconds = 3 seconds
+                }).fail(function(error) {
+                    $('#download-status').text("Error starting the download.");
+                });
             });
-        });
-    </script>
+        </script>
+
 </body>
 </html>
