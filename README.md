@@ -32,7 +32,7 @@ https://github.com/GameServerManagers/docker-gameserver/tree/main/docker-compose
 If the work is already done, build on top of it, no need to remake the wheel.
 
 
-For dev use:
+### For dev use:
 1. `python3 -m venv venv`
 2. `pip freeze > requirements.txt`
 
@@ -40,3 +40,7 @@ For dev use:
 1. set variables in `.env`
 2. run `docker-compose up` or `docker-compose up -d` for background run
 3. `docker ps --format "{{.ID}}: {{.Image}} - {{.Ports}}"` to see docker contaienr info, docker-compose does not show this info in docker desktop when ran from docker compoase for some reason...
+
+### Links To Learn From
+1. https://hub.docker.com/r/gameservermanagers/gameserver
+2. https://docs.docker.com/engine/storage/
