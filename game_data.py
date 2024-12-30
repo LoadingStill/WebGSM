@@ -4,5 +4,5 @@ game_pages = {
     'arma3': '/static/images/arma3.jpg',
     'dst': '/static/images/dst.jpg',
     'eco': '/static/images/eco.jpg',
-    # Add more games here as needed
+    'mc': '/static/images/mc.jpg'
 }

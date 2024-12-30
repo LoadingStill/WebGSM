@@ -2,6 +2,7 @@
   ["cs2", "cs2.jpg", "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg"],
   ["factorio", "fctr.jpg", "https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg?t=1597145422"],
   ["arma3", "arma3.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/107410/library_600x900.jpg?t=1568818863"],
-  ["dst", "dst.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/322330/library_600x900.jpg?t=1701988133"]
-  ["eco", "eco.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/382310/library_600x900.jpg?t=1702129337"]
+  ["dst", "dst.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/322330/library_600x900.jpg?t=1701988133"],
+  ["eco", "eco.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/382310/library_600x900.jpg?t=1702129337"],
+  ["mc", "mc.jpg", "https://cdn2.steamgriddb.com/grid/a73027901f88055aaa0fd1a9e25d36c7.png"]
 ]
