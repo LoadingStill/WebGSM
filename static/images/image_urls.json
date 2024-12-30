@@ -1,5 +1,7 @@
 [
   ["cs2", "cs2.jpg", "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900.jpg"],
   ["factorio", "fctr.jpg", "https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg?t=1597145422"],
-  ["arma3", "arma3.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/107410/library_600x900.jpg?t=1568818863"]
+  ["arma3", "arma3.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/107410/library_600x900.jpg?t=1568818863"],
+  ["dst", "dst.jpg", "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/322330/library_600x900.jpg?t=1701988133"]
+
 ]
