@@ -1,0 +1,3 @@
+[submodule "docker-gameserver"]
+	path = docker-gameserver
+	url = https://github.com/GameServerManagers/docker-gameserver.git
