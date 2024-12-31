@@ -1,7 +1,6 @@
-version: '3.8'  # Specifies the version of the Docker Compose file format
-
 services:
-  web-app:  # Defines the service named "flask-app"
+  dashboard:  # Defines the service named "flask-app"
+    image: ghcr.io/loadingstill/webgsm:latest  # Pulls the pre-built image from GitHub Container Registry
     build:
       context: .  # Build the image using the Dockerfile in the current directory
       dockerfile: Dockerfile  # Specifies the name of the Dockerfile (optional if named 'Dockerfile')
@@ -15,4 +14,6 @@ services:
         max-file: "3"
         labels: "debug"
     volumes:
-          - /var/run/docker.sock:/var/run/docker.sock  # Mount the Docker socket to allow container to control Docker
+      - /var/run/docker.sock:/var/run/docker.sock  # Mount the Docker socket to allow container to control Docker
+    environment:
+      - FLASK_ENV=development
