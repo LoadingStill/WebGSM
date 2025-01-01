@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  # bind mount example
+  linuxgsm-pstbs-bind:
+    image: gameservermanagers/gameserver:pstbs
+    # image: ghcr.io/gameservermanagers/gameserver:pstbs
+    container_name: pstbsserver
+    restart: unless-stopped
+    volumes:
+      - /path/to/linuxgsm/pstbsserver:/data
+    ports:
+
+  # volume example
+  linuxgsm-pstbs-volume:
+    image: gameservermanagers/gameserver:pstbs
+    # image: ghcr.io/gameservermanagers/gameserver:pstbs
+    container_name: pstbsserver
+    restart: unless-stopped
+    volumes:
+      - linuxgsm-pstbs:/data
+    ports:
+
+volumes:
+  linuxgsm-pstbs:

@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  # bind mount example
+  linuxgsm-lo-bind:
+    image: gameservermanagers/gameserver:lo
+    # image: ghcr.io/gameservermanagers/gameserver:lo
+    container_name: loserver
+    restart: unless-stopped
+    volumes:
+      - /path/to/linuxgsm/loserver:/data
+    network_mode: host
+
+  # volume example
+  linuxgsm-lo-volume:
+    image: gameservermanagers/gameserver:lo
+    # image: ghcr.io/gameservermanagers/gameserver:lo
+    container_name: loserver
+    restart: unless-stopped
+    volumes:
+      - linuxgsm-lo:/data
+    network_mode: host
+
+volumes:
+  linuxgsm-lo:

@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  # bind mount example
+  linuxgsm-mom-bind:
+    image: gameservermanagers/gameserver:mom
+    # image: ghcr.io/gameservermanagers/gameserver:mom
+    container_name: momserver
+    restart: unless-stopped
+    volumes:
+      - /path/to/linuxgsm/momserver:/data
+    network_mode: host
+
+  # volume example
+  linuxgsm-mom-volume:
+    image: gameservermanagers/gameserver:mom
+    # image: ghcr.io/gameservermanagers/gameserver:mom
+    container_name: momserver
+    restart: unless-stopped
+    volumes:
+      - linuxgsm-mom:/data
+    network_mode: host
+
+volumes:
+  linuxgsm-mom:
