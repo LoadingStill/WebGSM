@@ -11,7 +11,7 @@ I plan on adding a section to the git wiki on installing and running WebGSM.
 
 ## Download and Run
 1. Debian 12: `wget -O docker-compose.yml https://raw.githubusercontent.com/LoadingStill/WebGSM/refs/heads/main/docker-compose.yml`
-2. `docker compose up`
+2. To run in the background: `docker compose up -d` - To run in the forground: `docker compose up`
 3. Access the Web App: Open a browser and go to `http://localhost:5050/frontend/index.html`
 
 ## Build and Run
