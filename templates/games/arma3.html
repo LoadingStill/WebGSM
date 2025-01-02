@@ -32,6 +32,22 @@
 {% block body %}
     <p>Body</p>
     <!-- Rest of the page content -->
+        <button onclick="installGame('game_name')">Install Game</button>
+
+        <script>
+            function installGame(gameName) {
+                fetch('/install_game', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ game_name: gameName })
+                })
+                .then(response => response.json())
+                .then(data => alert(data.status || data.error))
+                .catch(error => alert("An error occurred"));
+            }
+        </script>
 {% endblock %}
 
 {% block footer %}

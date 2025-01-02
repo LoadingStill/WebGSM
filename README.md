@@ -19,6 +19,7 @@ I plan on adding a section to the git wiki on installing and running WebGSM.
 2. Build the container: `docker build -t webgsm .`
 3. Run the Container: `docker run -d -p 5050:5050 -v /var/run/docker.sock:/var/run/docker.sock webgsm`
 4. Access the Web App: Open a browser and go to `http://localhost:5050/frontend/index.html`
+5. OR if you have it local and you want to use this you can: `docker-compose -f docker-compose-dev.yml up`
 
 Notes:
 The `-v /var/run/docker.sock:/var/run/docker.sock` part allows the container to manage Docker on the host. This is powerful but risky—use with care.

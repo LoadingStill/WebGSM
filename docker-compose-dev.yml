@@ -1,0 +1,13 @@
+services:
+  flask-app:
+    container_name: WebGSM-DEV
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock       # Mount Docker socket to enable Docker control
+      - C:/Users/young/Documentos/Docker/WebGSM/docker-gameserver:/docker-gameserver s
+    environment:
+      - FLASK_APP=app.py
+    ports:
+      - "5050:5050"

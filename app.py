@@ -24,12 +24,30 @@ def start_download():
     except subprocess.CalledProcessError as e:
         return jsonify({"message": f"Error: {e}"}), 500
 
+# Game name and page portion.
 @app.route('/games/<game_name>.html')
 def game(game_name):
     if game_name in game_pages:
         return render_template(f'/games/{game_name}.html')
     else:
         return "Game not found", 404
+
+
+# Game Install Portion - Alpha
+@app.route('/install_game', methods=['POST'])
+def install_game():
+    game_name = request.json.get('game_name')
+    if not game_name:
+        return jsonify({"error": "Game name is required"}), 400
+
+    docker_compose_file = f'docker-gameserver/dockercompose/docker-compose-{game_name}.yml'
+    try:
+        subprocess.run(['docker-compose', '-f', docker_compose_file, 'up', '-d'], check=True)
+        return jsonify({"status": "Game installed successfully"}), 200
+    except subprocess.CalledProcessError as e:
+        return jsonify({"error": f"Error occurred: {str(e)}"}), 500
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5050)
